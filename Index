@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    iframe { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbxBV6fYHsKpkBIM8g9xslpr6iz__IfvW7ybHvEdQ1Kc0zh3BZr4JZzpKqTLzV881lNviA/exec" 
+    allow="geolocation">
+  </iframe>
+</body>
+</html>
