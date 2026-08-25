@@ -17,7 +17,7 @@
 
   <meta
     name="description"
-    content="D'Anjung Cottage Paka — a peaceful and comfortable stay in Paka, Terengganu, Malaysia.">
+    content="D'Anjung Cottage Paka — a comfortable and peaceful stay in Paka, Terengganu, Malaysia.">
 
   <meta
     name="robots"
@@ -48,24 +48,29 @@
   <!-- =====================================================
        FAVICON / LOGO
        Existing GitHub file:
-       images/logo.png
+       /images/logo.png
   ====================================================== -->
 
   <link
     rel="icon"
     type="image/png"
     sizes="512x512"
-    href="./images/logo.png">
+    href="/images/logo.png">
 
   <link
     rel="shortcut icon"
     type="image/png"
-    href="./images/logo.png">
+    href="/images/logo.png">
 
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="./images/logo.png">
+    href="/images/logo.png">
+
+
+  <!-- =====================================================
+       APPLE
+  ====================================================== -->
 
   <meta
     name="apple-mobile-web-app-title"
@@ -143,18 +148,24 @@
 
 
   <!-- =====================================================
-       GOOGLE / SEARCH STRUCTURED DATA
+       STRUCTURED DATA
   ====================================================== -->
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+
     "name": "D'Anjung Cottage",
+
     "url": "https://danjungcottage.com/",
+
     "logo": "https://danjungcottage.com/images/logo.png",
+
     "image": "https://danjungcottage.com/images/logo.png",
+
     "description": "A peaceful and comfortable stay in Paka, Terengganu, Malaysia.",
+
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Paka",
@@ -183,11 +194,15 @@
     rel="stylesheet">
 
 
+  <!-- =====================================================
+       PAGE STYLE
+  ====================================================== -->
+
   <style>
 
     /* =====================================================
        ROOT
-    ===================================================== */
+    ====================================================== */
 
     :root {
 
@@ -216,7 +231,7 @@
 
     /* =====================================================
        RESET
-    ===================================================== */
+    ====================================================== */
 
     *,
     *::before,
@@ -234,7 +249,8 @@
 
       scroll-behavior: smooth;
 
-      background: var(--cream);
+      background:
+        var(--cream);
 
     }
 
@@ -245,87 +261,129 @@
         "DM Sans",
         sans-serif;
 
-      color: var(--dark);
+      color:
+        var(--dark);
 
-      background: var(--cream);
+      background:
+        var(--cream);
 
-      overflow-x: hidden;
+      overflow-x:
+        hidden;
 
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing:
+        antialiased;
 
-      text-rendering: optimizeLegibility;
+      text-rendering:
+        optimizeLegibility;
 
-      opacity: 1;
+      opacity:
+        0;
+
+      transition:
+        opacity .35s var(--ease);
+
+    }
+
+
+    body.loaded {
+
+      opacity:
+        1;
+
+    }
+
+
+    body.is-navigating {
+
+      opacity:
+        .94;
 
     }
 
 
     a {
 
-      color: inherit;
+      color:
+        inherit;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color:
+        transparent;
 
     }
 
 
     button {
 
-      font-family: inherit;
+      font-family:
+        inherit;
 
     }
 
 
     img {
 
-      max-width: 100%;
-
-      height: auto;
+      max-width:
+        100%;
 
     }
 
 
     /* =====================================================
        SELECTION
-    ===================================================== */
+    ====================================================== */
 
     ::selection {
 
-      background: var(--accent);
+      background:
+        var(--accent);
 
-      color: white;
+      color:
+        white;
 
     }
 
 
     /* =====================================================
        NAVBAR
-    ===================================================== */
+    ====================================================== */
 
     .navbar {
 
-      position: fixed;
+      position:
+        fixed;
 
-      top: 0;
-      left: 0;
-      right: 0;
+      top:
+        0;
 
-      z-index: 1000;
+      left:
+        0;
 
-      display: flex;
+      right:
+        0;
 
-      align-items: center;
+      z-index:
+        1000;
 
-      justify-content: space-between;
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
 
       padding:
         24px 5%;
 
-      color: white;
+      color:
+        white;
 
-      background: transparent;
+      background:
+        transparent;
 
       transition:
         background .4s var(--ease),
@@ -338,11 +396,14 @@
 
     .navbar.scrolled {
 
-      padding-top: 14px;
+      padding-top:
+        14px;
 
-      padding-bottom: 14px;
+      padding-bottom:
+        14px;
 
-      color: var(--dark);
+      color:
+        var(--dark);
 
       background:
         rgba(255,255,255,.94);
@@ -355,58 +416,73 @@
 
     /* =====================================================
        LOGO
-    ===================================================== */
+    ====================================================== */
 
     .logo {
 
-      position: relative;
+      position:
+        relative;
 
-      z-index: 2;
+      z-index:
+        2;
 
-      font-size: 1.08rem;
+      font-size:
+        1.08rem;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      letter-spacing: .02em;
+      letter-spacing:
+        .02em;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
 
     }
 
 
     .logo span {
 
-      font-weight: 400;
+      font-weight:
+        400;
 
-      opacity: .72;
+      opacity:
+        .72;
 
     }
 
 
     /* =====================================================
        NAV LINKS
-    ===================================================== */
+    ====================================================== */
 
     .nav-links {
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 30px;
+      gap:
+        30px;
 
-      font-size: .86rem;
+      font-size:
+        .86rem;
 
-      font-weight: 500;
+      font-weight:
+        500;
 
     }
 
 
     .nav-links > a:not(.nav-book) {
 
-      position: relative;
+      position:
+        relative;
 
-      opacity: .82;
+      opacity:
+        .82;
 
       transition:
         opacity .25s ease;
@@ -416,18 +492,26 @@
 
     .nav-links > a:not(.nav-book)::after {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      left: 0;
-      bottom: -7px;
+      left:
+        0;
 
-      width: 0;
+      bottom:
+        -7px;
 
-      height: 1px;
+      width:
+        0;
 
-      background: currentColor;
+      height:
+        1px;
+
+      background:
+        currentColor;
 
       transition:
         width .3s var(--ease);
@@ -437,40 +521,49 @@
 
     .nav-links > a:not(.nav-book):hover {
 
-      opacity: 1;
+      opacity:
+        1;
 
     }
 
 
     .nav-links > a:not(.nav-book):hover::after {
 
-      width: 100%;
+      width:
+        100%;
 
     }
 
 
     /* =====================================================
-       NAV BOOK BUTTON
-    ===================================================== */
+       BOOK BUTTON
+    ====================================================== */
 
     .nav-book {
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
       padding:
         11px 19px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: white;
+      background:
+        white;
 
-      color: var(--dark);
+      color:
+        var(--dark);
 
-      font-weight: 600;
+      font-weight:
+        600;
 
       box-shadow:
         0 5px 20px rgba(0,0,0,.08);
@@ -496,9 +589,11 @@
 
     .navbar.scrolled .nav-book {
 
-      background: var(--dark);
+      background:
+        var(--dark);
 
-      color: white;
+      color:
+        white;
 
     }
 
@@ -509,26 +604,35 @@
 
     .hero {
 
-      position: relative;
+      position:
+        relative;
 
-      min-height: 100svh;
+      min-height:
+        100svh;
 
-      height: 760px;
+      height:
+        760px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      color: white;
+      color:
+        white;
 
       background:
         #17211d;
 
-      isolation: isolate;
+      isolation:
+        isolate;
 
     }
 
@@ -539,16 +643,23 @@
 
     .hero-video {
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      width: 100%;
-      height: 100%;
+      width:
+        100%;
 
-      object-fit: cover;
+      height:
+        100%;
 
-      z-index: -3;
+      object-fit:
+        cover;
+
+      z-index:
+        -3;
 
       background:
         #17211d
@@ -557,11 +668,6 @@
         )
         center / cover
         no-repeat;
-
-    }
-
-
-    .hero-video {
 
       transform:
         scale(1.025);
@@ -575,11 +681,14 @@
 
     .hero-overlay {
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: -2;
+      z-index:
+        -2;
 
       background:
 
@@ -593,21 +702,22 @@
     }
 
 
-    /* =====================================================
-       HERO GLOW
-    ====================================================== */
-
     .hero::after {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: -1;
+      z-index:
+        -1;
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
       background:
 
@@ -629,12 +739,14 @@
       width:
         min(900px, 90%);
 
-      text-align: center;
+      text-align:
+        center;
 
       transform:
         translateY(12px);
 
-      opacity: 0;
+      opacity:
+        0;
 
       animation:
         heroEnter .9s .1s var(--ease)
@@ -647,7 +759,8 @@
 
       to {
 
-        opacity: 1;
+        opacity:
+          1;
 
         transform:
           translateY(0);
@@ -659,15 +772,20 @@
 
     .hero-eyebrow {
 
-      margin-bottom: 21px;
+      margin-bottom:
+        21px;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: .28em;
+      letter-spacing:
+        .28em;
 
-      font-size: .68rem;
+      font-size:
+        .68rem;
 
-      font-weight: 600;
+      font-weight:
+        600;
 
       color:
         rgba(255,255,255,.82);
@@ -684,14 +802,17 @@
       font-size:
         clamp(3.2rem, 8vw, 6.8rem);
 
-      line-height: .94;
+      line-height:
+        .94;
 
-      font-weight: 400;
+      font-weight:
+        400;
 
       letter-spacing:
         -.035em;
 
-      margin-bottom: 28px;
+      margin-bottom:
+        28px;
 
       text-shadow:
         0 5px 35px rgba(0,0,0,.22);
@@ -701,7 +822,8 @@
 
     .hero p {
 
-      max-width: 570px;
+      max-width:
+        570px;
 
       margin:
         0 auto 36px;
@@ -712,42 +834,54 @@
       font-size:
         clamp(.92rem, 2vw, 1.08rem);
 
-      line-height: 1.8;
+      line-height:
+        1.8;
 
     }
 
 
     /* =====================================================
-       PREMIUM BUTTON
+       BUTTON
     ====================================================== */
 
     .hero-button,
     .cta-button {
 
-      position: relative;
+      position:
+        relative;
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      gap: 8px;
+      gap:
+        8px;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
       padding:
         15px 28px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: white;
+      background:
+        white;
 
-      color: var(--dark);
+      color:
+        var(--dark);
 
-      font-size: .88rem;
+      font-size:
+        .88rem;
 
-      font-weight: 600;
+      font-weight:
+        600;
 
       transition:
         transform .3s var(--ease),
@@ -759,11 +893,14 @@
     .hero-button::before,
     .cta-button::before {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
       background:
         linear-gradient(
@@ -809,31 +946,41 @@
 
     .scroll-indicator {
 
-      position: absolute;
+      position:
+        absolute;
 
-      bottom: 28px;
+      bottom:
+        28px;
 
-      left: 50%;
+      left:
+        50%;
 
       transform:
         translateX(-50%);
 
-      display: flex;
+      display:
+        flex;
 
-      flex-direction: column;
+      flex-direction:
+        column;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 8px;
+      gap:
+        8px;
 
       color:
         rgba(255,255,255,.65);
 
-      font-size: .62rem;
+      font-size:
+        .62rem;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: .2em;
+      letter-spacing:
+        .2em;
 
       animation:
         scrollFloat 2.5s ease-in-out
@@ -844,9 +991,11 @@
 
     .scroll-line {
 
-      width: 1px;
+      width:
+        1px;
 
-      height: 35px;
+      height:
+        35px;
 
       background:
         linear-gradient(
@@ -863,7 +1012,8 @@
       0%,
       100% {
 
-        opacity: .55;
+        opacity:
+          .55;
 
         transform:
           translate(-50%,0);
@@ -872,7 +1022,8 @@
 
       50% {
 
-        opacity: 1;
+        opacity:
+          1;
 
         transform:
           translate(-50%,5px);
@@ -907,26 +1058,34 @@
 
     .eyebrow {
 
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
 
-      color: var(--accent);
+      color:
+        var(--accent);
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: .2em;
+      letter-spacing:
+        .2em;
 
-      font-size: .68rem;
+      font-size:
+        .68rem;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
     }
 
 
     .section-title {
 
-      max-width: 720px;
+      max-width:
+        720px;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        25px;
 
       font-family:
         "Playfair Display",
@@ -935,35 +1094,43 @@
       font-size:
         clamp(2.4rem, 5vw, 4.2rem);
 
-      line-height: 1.02;
+      line-height:
+        1.02;
 
-      font-weight: 400;
+      font-weight:
+        400;
 
-      letter-spacing: -.025em;
+      letter-spacing:
+        -.025em;
 
     }
 
 
     .section-text {
 
-      max-width: 650px;
+      max-width:
+        650px;
 
-      color: var(--muted);
+      color:
+        var(--muted);
 
-      font-size: .98rem;
+      font-size:
+        .98rem;
 
-      line-height: 1.85;
+      line-height:
+        1.85;
 
     }
 
 
     /* =====================================================
-       REVEAL ANIMATION
+       REVEAL
     ====================================================== */
 
     .reveal {
 
-      opacity: 0;
+      opacity:
+        0;
 
       transform:
         translateY(28px);
@@ -977,7 +1144,8 @@
 
     .reveal.visible {
 
-      opacity: 1;
+      opacity:
+        1;
 
       transform:
         translateY(0);
@@ -999,27 +1167,34 @@
 
     .intro-grid {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         1fr 1fr;
 
-      gap: 90px;
+      gap:
+        90px;
 
-      align-items: center;
+      align-items:
+        center;
 
     }
 
 
     .intro-image {
 
-      position: relative;
+      position:
+        relative;
 
-      min-height: 530px;
+      min-height:
+        530px;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      border-radius: 24px;
+      border-radius:
+        24px;
 
       background:
 
@@ -1042,17 +1217,21 @@
 
     .intro-image::after {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
       border:
         1px solid
         rgba(255,255,255,.18);
 
-      border-radius: inherit;
+      border-radius:
+        inherit;
 
     }
 
@@ -1071,35 +1250,46 @@
 
     .rooms-header {
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: flex-end;
+      align-items:
+        flex-end;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      gap: 30px;
+      gap:
+        30px;
 
-      margin-bottom: 50px;
+      margin-bottom:
+        50px;
 
     }
 
 
     .view-all {
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 8px;
+      gap:
+        8px;
 
-      padding-bottom: 6px;
+      padding-bottom:
+        6px;
 
       border-bottom:
         1px solid var(--dark);
 
-      font-size: .86rem;
+      font-size:
+        .86rem;
 
-      font-weight: 600;
+      font-weight:
+        600;
 
       transition:
         gap .3s var(--ease);
@@ -1109,7 +1299,8 @@
 
     .view-all:hover {
 
-      gap: 13px;
+      gap:
+        13px;
 
     }
 
@@ -1120,12 +1311,14 @@
 
     .rooms-grid {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(4, 1fr);
 
-      gap: 20px;
+      gap:
+        20px;
 
     }
 
@@ -1136,13 +1329,17 @@
 
     .room-card {
 
-      position: relative;
+      position:
+        relative;
 
-      display: block;
+      display:
+        block;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
       background:
         var(--cream);
@@ -1168,17 +1365,16 @@
     }
 
 
-    /* =====================================================
-       ROOM IMAGE
-    ====================================================== */
-
     .room-image {
 
-      position: relative;
+      position:
+        relative;
 
-      height: 285px;
+      height:
+        285px;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
       background:
         #ddd
@@ -1190,11 +1386,14 @@
 
     .room-image::after {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
       background:
         linear-gradient(
@@ -1203,7 +1402,8 @@
           rgba(0,0,0,.16)
         );
 
-      opacity: .7;
+      opacity:
+        .7;
 
       transition:
         opacity .4s ease;
@@ -1214,7 +1414,8 @@
     .room-card:hover
     .room-image::after {
 
-      opacity: .9;
+      opacity:
+        .9;
 
     }
 
@@ -1229,7 +1430,8 @@
 
     .room-info h3 {
 
-      margin-bottom: 9px;
+      margin-bottom:
+        9px;
 
       font-family:
         "Playfair Display",
@@ -1238,7 +1440,8 @@
       font-size:
         1.48rem;
 
-      font-weight: 400;
+      font-weight:
+        400;
 
     }
 
@@ -1248,7 +1451,8 @@
       color:
         var(--muted);
 
-      font-size: .82rem;
+      font-size:
+        .82rem;
 
     }
 
@@ -1270,38 +1474,49 @@
 
     .cta {
 
-      position: relative;
+      position:
+        relative;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
       background:
         var(--dark);
 
-      color: white;
+      color:
+        white;
 
-      text-align: center;
+      text-align:
+        center;
 
     }
 
 
     .cta::before {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      width: 500px;
+      width:
+        500px;
 
-      height: 500px;
+      height:
+        500px;
 
-      left: 50%;
+      left:
+        50%;
 
-      top: 50%;
+      top:
+        50%;
 
       transform:
         translate(-50%,-50%);
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
       background:
         radial-gradient(
@@ -1310,25 +1525,30 @@
           transparent 65%
         );
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
     }
 
 
     .cta .section-inner {
 
-      position: relative;
+      position:
+        relative;
 
-      z-index: 1;
+      z-index:
+        1;
 
     }
 
 
     .cta .section-title {
 
-      margin-left: auto;
+      margin-left:
+        auto;
 
-      margin-right: auto;
+      margin-right:
+        auto;
 
     }
 
@@ -1370,13 +1590,17 @@
       margin:
         0 auto;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      gap: 30px;
+      gap:
+        30px;
 
     }
 
@@ -1386,14 +1610,16 @@
       font-size:
         1.05rem;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
     }
 
 
     .footer-text {
 
-      margin-top: 7px;
+      margin-top:
+        7px;
 
       color:
         #89938c;
@@ -1406,11 +1632,14 @@
 
     .footer-links {
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 22px;
+      gap:
+        22px;
 
       color:
         #aeb7b1;
@@ -1453,7 +1682,8 @@
 
       .nav-links {
 
-        gap: 10px;
+        gap:
+          10px;
 
       }
 
@@ -1461,7 +1691,8 @@
       .nav-links
       > a:not(.nav-book) {
 
-        display: none;
+        display:
+          none;
 
       }
 
@@ -1745,6 +1976,14 @@
       }
 
 
+      body {
+
+        opacity:
+          1;
+
+      }
+
+
       .reveal {
 
         opacity:
@@ -1775,7 +2014,7 @@
 
 
   <a
-    href="./"
+    href="/"
     class="logo">
 
     D'Anjung <span>Cottage</span>
@@ -1787,7 +2026,7 @@
 
 
     <a
-      href="./">
+      href="/">
 
       About
 
@@ -1795,7 +2034,7 @@
 
 
     <a
-      href="./Rooms/">
+      href="/Rooms/">
 
       Rooms
 
@@ -1803,17 +2042,20 @@
 
 
     <a
-      href="./Contact/">
+      href="/Contact/">
 
       Contact
 
     </a>
 
 
-    <!-- BOOKING REMAINS SEPARATE -->
+    <!--
+      BOOKING REMAINS OUTSIDE GITHUB MIGRATION.
+      Keep your existing booking system.
+    -->
 
     <a
-      href="./Book/"
+      href="https://book.danjungcottage.com/"
       class="nav-book">
 
       Book Your Stay
@@ -1881,7 +2123,7 @@
 
 
     <a
-      href="./Book/"
+      href="/Book/"
       class="hero-button">
 
       Book Your Stay →
@@ -2003,7 +2245,7 @@
 
 
       <a
-        href="./Rooms/"
+        href="/Rooms/"
         class="view-all">
 
         View all rooms →
@@ -2018,12 +2260,10 @@
     <div class="rooms-grid">
 
 
-      <!-- =================================================
-           KING
-      ================================================== -->
+      <!-- KING -->
 
       <a
-        href="./Rooms/#king"
+        href="/Rooms/#king"
         class="room-card reveal">
 
 
@@ -2062,12 +2302,10 @@
 
 
 
-      <!-- =================================================
-           TWIN
-      ================================================== -->
+      <!-- TWIN -->
 
       <a
-        href="./Rooms/#twin"
+        href="/Rooms/#twin"
         class="room-card reveal">
 
 
@@ -2106,12 +2344,10 @@
 
 
 
-      <!-- =================================================
-           QUEEN
-      ================================================== -->
+      <!-- QUEEN -->
 
       <a
-        href="./Rooms/#queen"
+        href="/Rooms/#queen"
         class="room-card reveal">
 
 
@@ -2119,7 +2355,7 @@
           class="room-image"
           style="
             background-image:
-            url('https://lh3.googleusercontent.com/u/0/d/1FxYO9aNv9lSihHtgxeF0kzhnmataaGG?q=80&w=1000');
+            url('https://lh3.googleusercontent.com/u/0/d/1FxYO9aNv9lSihHtgxeF0kzhnmataaGG2?q=80&w=1000');
           ">
         </div>
 
@@ -2150,12 +2386,10 @@
 
 
 
-      <!-- =================================================
-           FAMILY
-      ================================================== -->
+      <!-- FAMILY -->
 
       <a
-        href="./Rooms/#family"
+        href="/Rooms/#family"
         class="room-card reveal">
 
 
@@ -2236,7 +2470,7 @@
 
 
     <a
-      href="./Book/"
+      href="/Book/"
       class="cta-button">
 
       Book Your Stay →
@@ -2284,7 +2518,7 @@
 
 
       <a
-        href="./Policies/">
+        href="/Policies/">
 
         Privacy Policy
 
@@ -2292,7 +2526,7 @@
 
 
       <a
-        href="./Policies/">
+        href="/Policies/">
 
         Terms & Conditions
 
@@ -2300,7 +2534,7 @@
 
 
       <a
-        href="./Contact/">
+        href="/Contact/">
 
         Contact Us
 
@@ -2321,6 +2555,42 @@
 ===================================================== -->
 
 <script>
+
+  /* =====================================================
+     PAGE LOAD
+  ====================================================== */
+
+  window.addEventListener(
+    "load",
+    function () {
+
+      document.body.classList.add(
+        "loaded"
+      );
+
+    }
+  );
+
+
+  /*
+   * Safety fallback.
+   *
+   * Never leave the page invisible
+   * if something takes too long.
+   */
+
+  setTimeout(
+    function () {
+
+      document.body.classList.add(
+        "loaded"
+      );
+
+    },
+    900
+  );
+
+
 
   /* =====================================================
      NAVBAR
@@ -2432,7 +2702,8 @@
         },
         {
 
-          threshold: .12,
+          threshold:
+            .12,
 
           rootMargin:
             "0px 0px -50px 0px"
@@ -2482,23 +2753,6 @@
   if (heroVideo) {
 
 
-    /*
-     * Attempt playback after the page loads.
-     * The video is muted and playsinline,
-     * which is suitable for mobile autoplay.
-     */
-
-    heroVideo.play()
-      .catch(
-        function () {}
-      );
-
-
-    /*
-     * Pause the video when the hero
-     * is no longer visible.
-     */
-
     if (
       "IntersectionObserver"
       in window
@@ -2520,7 +2774,8 @@
                   entry.isIntersecting
                 ) {
 
-                  heroVideo.play()
+                  heroVideo
+                    .play()
                     .catch(
                       function () {}
                     );
@@ -2537,7 +2792,8 @@
 
           },
           {
-            threshold: 0.05
+            threshold:
+              0.05
           }
         );
 
@@ -2553,35 +2809,30 @@
 
 
   /* =====================================================
-     MOBILE / CONNECTION FRIENDLY VIDEO
+     MOBILE VIDEO FALLBACK
   ====================================================== */
 
   /*
-   * Some Android devices or slow connections
-   * may block or delay video autoplay.
+   * Some mobile browsers are aggressive
+   * about autoplaying video.
    *
-   * The poster/background image remains visible,
-   * so the hero still works without video.
+   * If autoplay fails, the poster image
+   * remains visible instead of showing
+   * a broken-looking video area.
    */
 
-  window.addEventListener(
-    "pageshow",
-    function () {
+  if (heroVideo) {
 
-      if (
-        heroVideo &&
-        heroVideo.paused
-      ) {
+    heroVideo.play()
+      .catch(
+        function () {
 
-        heroVideo.play()
-          .catch(
-            function () {}
-          );
+          heroVideo.pause();
 
-      }
+        }
+      );
 
-    }
-  );
+  }
 
 </script>
 
