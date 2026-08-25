@@ -17,7 +17,7 @@
 
   <meta
     name="description"
-    content="D'Anjung Cottage Paka — a comfortable and peaceful stay in Paka, Terengganu, Malaysia.">
+    content="D'Anjung Cottage Paka — a peaceful and comfortable stay in Paka, Terengganu, Malaysia.">
 
   <meta
     name="robots"
@@ -46,7 +46,7 @@
 
 
   <!-- =====================================================
-       FAVICON
+       FAVICON / LOGO
        Existing GitHub file:
        images/logo.png
   ====================================================== -->
@@ -55,21 +55,17 @@
     rel="icon"
     type="image/png"
     sizes="512x512"
-    href="/images/logo.png">
+    href="./images/logo.png">
 
   <link
     rel="shortcut icon"
     type="image/png"
-    href="/images/logo.png">
-
-  <!-- iPhone / iPad Home Screen -->
+    href="./images/logo.png">
 
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="/images/logo.png">
-
-  <!-- Apple -->
+    href="./images/logo.png">
 
   <meta
     name="apple-mobile-web-app-title"
@@ -86,7 +82,6 @@
 
   <!-- =====================================================
        OPEN GRAPH
-       Facebook / WhatsApp / Messenger / other sharing
   ====================================================== -->
 
   <meta
@@ -155,17 +150,11 @@
   {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
-
     "name": "D'Anjung Cottage",
-
     "url": "https://danjungcottage.com/",
-
     "logo": "https://danjungcottage.com/images/logo.png",
-
     "image": "https://danjungcottage.com/images/logo.png",
-
     "description": "A peaceful and comfortable stay in Paka, Terengganu, Malaysia.",
-
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Paka",
@@ -177,58 +166,1594 @@
 
 
   <!-- =====================================================
-       GOOGLE FONTS / OPTIONAL
-       The actual website is inside Apps Script.
-       These are not required here.
+       GOOGLE FONTS
   ====================================================== -->
 
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
 
-  <!-- =====================================================
-       PAGE STYLE
-  ====================================================== -->
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
 
   <style>
 
-    * {
-      box-sizing: border-box;
+    /* =====================================================
+       ROOT
+    ===================================================== */
+
+    :root {
+
+      --dark: #17211d;
+      --dark-2: #202c26;
+      --dark-3: #2d3b34;
+
+      --cream: #f7f5ef;
+      --cream-2: #efede5;
+
+      --white: #ffffff;
+
+      --muted: #707871;
+      --muted-light: #aeb7b1;
+
+      --accent: #b8955b;
+      --accent-light: #d5b77c;
+
+      --line: #e5e2da;
+
+      --ease:
+        cubic-bezier(.22,1,.36,1);
+
     }
 
-    html,
-    body {
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    *,
+    *::before,
+    *::after {
+
+      box-sizing: border-box;
 
       margin: 0;
       padding: 0;
 
-      width: 100%;
-      height: 100%;
+    }
 
-      overflow: hidden;
 
-      background: #17211d;
+    html {
+
+      scroll-behavior: smooth;
+
+      background: var(--cream);
 
     }
 
-    .app-container {
+
+    body {
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      color: var(--dark);
+
+      background: var(--cream);
+
+      overflow-x: hidden;
+
+      -webkit-font-smoothing: antialiased;
+
+      text-rendering: optimizeLegibility;
+
+      opacity: 1;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+      -webkit-tap-highlight-color: transparent;
+
+    }
+
+
+    button {
+
+      font-family: inherit;
+
+    }
+
+
+    img {
+
+      max-width: 100%;
+
+      height: auto;
+
+    }
+
+
+    /* =====================================================
+       SELECTION
+    ===================================================== */
+
+    ::selection {
+
+      background: var(--accent);
+
+      color: white;
+
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
 
       position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 1000;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding:
+        24px 5%;
+
+      color: white;
+
+      background: transparent;
+
+      transition:
+        background .4s var(--ease),
+        padding .4s var(--ease),
+        box-shadow .4s var(--ease),
+        color .4s var(--ease);
+
+    }
+
+
+    .navbar.scrolled {
+
+      padding-top: 14px;
+
+      padding-bottom: 14px;
+
+      color: var(--dark);
+
+      background:
+        rgba(255,255,255,.94);
+
+      box-shadow:
+        0 8px 35px rgba(0,0,0,.08);
+
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo {
+
+      position: relative;
+
+      z-index: 2;
+
+      font-size: 1.08rem;
+
+      font-weight: 700;
+
+      letter-spacing: .02em;
+
+      white-space: nowrap;
+
+    }
+
+
+    .logo span {
+
+      font-weight: 400;
+
+      opacity: .72;
+
+    }
+
+
+    /* =====================================================
+       NAV LINKS
+    ===================================================== */
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: .86rem;
+
+      font-weight: 500;
+
+    }
+
+
+    .nav-links > a:not(.nav-book) {
+
+      position: relative;
+
+      opacity: .82;
+
+      transition:
+        opacity .25s ease;
+
+    }
+
+
+    .nav-links > a:not(.nav-book)::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 0;
+
+      height: 1px;
+
+      background: currentColor;
+
+      transition:
+        width .3s var(--ease);
+
+    }
+
+
+    .nav-links > a:not(.nav-book):hover {
+
+      opacity: 1;
+
+    }
+
+
+    .nav-links > a:not(.nav-book):hover::after {
+
+      width: 100%;
+
+    }
+
+
+    /* =====================================================
+       NAV BOOK BUTTON
+    ===================================================== */
+
+    .nav-book {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding:
+        11px 19px;
+
+      border-radius: 999px;
+
+      background: white;
+
+      color: var(--dark);
+
+      font-weight: 600;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,.08);
+
+      transition:
+        transform .25s var(--ease),
+        box-shadow .25s ease,
+        background .25s ease;
+
+    }
+
+
+    .nav-book:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 9px 28px rgba(0,0,0,.15);
+
+    }
+
+
+    .navbar.scrolled .nav-book {
+
+      background: var(--dark);
+
+      color: white;
+
+    }
+
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
+    .hero {
+
+      position: relative;
+
+      min-height: 100svh;
+
+      height: 760px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      color: white;
+
+      background:
+        #17211d;
+
+      isolation: isolate;
+
+    }
+
+
+    /* =====================================================
+       HERO VIDEO
+    ====================================================== */
+
+    .hero-video {
+
+      position: absolute;
 
       inset: 0;
 
       width: 100%;
       height: 100%;
 
-      background: #17211d;
+      object-fit: cover;
+
+      z-index: -3;
+
+      background:
+        #17211d
+        url(
+          "https://lh3.googleusercontent.com/u/0/d/1DhO33-5QA_Tkp-VrzKrPTepyxxH48QD3?q=80&w=1600"
+        )
+        center / cover
+        no-repeat;
 
     }
 
-    iframe {
+
+    .hero-video {
+
+      transform:
+        scale(1.025);
+
+    }
+
+
+    /* =====================================================
+       HERO OVERLAY
+    ====================================================== */
+
+    .hero-overlay {
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: -2;
+
+      background:
+
+        linear-gradient(
+          180deg,
+          rgba(10,17,14,.56) 0%,
+          rgba(10,17,14,.18) 42%,
+          rgba(10,17,14,.76) 100%
+        );
+
+    }
+
+
+    /* =====================================================
+       HERO GLOW
+    ====================================================== */
+
+    .hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: -1;
+
+      pointer-events: none;
+
+      background:
+
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(255,255,255,.08),
+          transparent 40%
+        );
+
+    }
+
+
+    /* =====================================================
+       HERO CONTENT
+    ====================================================== */
+
+    .hero-content {
+
+      width:
+        min(900px, 90%);
+
+      text-align: center;
+
+      transform:
+        translateY(12px);
+
+      opacity: 0;
+
+      animation:
+        heroEnter .9s .1s var(--ease)
+        forwards;
+
+    }
+
+
+    @keyframes heroEnter {
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    .hero-eyebrow {
+
+      margin-bottom: 21px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .28em;
+
+      font-size: .68rem;
+
+      font-weight: 600;
+
+      color:
+        rgba(255,255,255,.82);
+
+    }
+
+
+    .hero h1 {
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(3.2rem, 8vw, 6.8rem);
+
+      line-height: .94;
+
+      font-weight: 400;
+
+      letter-spacing:
+        -.035em;
+
+      margin-bottom: 28px;
+
+      text-shadow:
+        0 5px 35px rgba(0,0,0,.22);
+
+    }
+
+
+    .hero p {
+
+      max-width: 570px;
+
+      margin:
+        0 auto 36px;
+
+      color:
+        rgba(255,255,255,.86);
+
+      font-size:
+        clamp(.92rem, 2vw, 1.08rem);
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =====================================================
+       PREMIUM BUTTON
+    ====================================================== */
+
+    .hero-button,
+    .cta-button {
+
+      position: relative;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      overflow: hidden;
+
+      padding:
+        15px 28px;
+
+      border-radius: 999px;
+
+      background: white;
+
+      color: var(--dark);
+
+      font-size: .88rem;
+
+      font-weight: 600;
+
+      transition:
+        transform .3s var(--ease),
+        box-shadow .3s ease;
+
+    }
+
+
+    .hero-button::before,
+    .cta-button::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          110deg,
+          transparent 20%,
+          rgba(255,255,255,.7),
+          transparent 80%
+        );
+
+      transform:
+        translateX(-120%);
+
+      transition:
+        transform .6s var(--ease);
+
+    }
+
+
+    .hero-button:hover::before,
+    .cta-button:hover::before {
+
+      transform:
+        translateX(120%);
+
+    }
+
+
+    .hero-button:hover,
+    .cta-button:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 14px 35px rgba(0,0,0,.22);
+
+    }
+
+
+    /* =====================================================
+       SCROLL INDICATOR
+    ====================================================== */
+
+    .scroll-indicator {
+
+      position: absolute;
+
+      bottom: 28px;
+
+      left: 50%;
+
+      transform:
+        translateX(-50%);
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color:
+        rgba(255,255,255,.65);
+
+      font-size: .62rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: .2em;
+
+      animation:
+        scrollFloat 2.5s ease-in-out
+        infinite;
+
+    }
+
+
+    .scroll-line {
+
+      width: 1px;
+
+      height: 35px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,.7),
+          transparent
+        );
+
+    }
+
+
+    @keyframes scrollFloat {
+
+      0%,
+      100% {
+
+        opacity: .55;
+
+        transform:
+          translate(-50%,0);
+
+      }
+
+      50% {
+
+        opacity: 1;
+
+        transform:
+          translate(-50%,5px);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SECTIONS
+    ====================================================== */
+
+    .section {
+
+      padding:
+        120px 6%;
+
+    }
+
+
+    .section-inner {
+
+      width:
+        min(1200px, 100%);
+
+      margin:
+        0 auto;
+
+    }
+
+
+    .eyebrow {
+
+      margin-bottom: 15px;
+
+      color: var(--accent);
+
+      text-transform: uppercase;
+
+      letter-spacing: .2em;
+
+      font-size: .68rem;
+
+      font-weight: 700;
+
+    }
+
+
+    .section-title {
+
+      max-width: 720px;
+
+      margin-bottom: 25px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(2.4rem, 5vw, 4.2rem);
+
+      line-height: 1.02;
+
+      font-weight: 400;
+
+      letter-spacing: -.025em;
+
+    }
+
+
+    .section-text {
+
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: .98rem;
+
+      line-height: 1.85;
+
+    }
+
+
+    /* =====================================================
+       REVEAL ANIMATION
+    ====================================================== */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(28px);
+
+      transition:
+        opacity .8s var(--ease),
+        transform .8s var(--ease);
+
+    }
+
+
+    .reveal.visible {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    /* =====================================================
+       INTRO
+    ====================================================== */
+
+    .intro {
+
+      background:
+        var(--cream);
+
+    }
+
+
+    .intro-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 90px;
+
+      align-items: center;
+
+    }
+
+
+    .intro-image {
+
+      position: relative;
+
+      min-height: 530px;
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      background:
+
+        linear-gradient(
+          rgba(0,0,0,.05),
+          rgba(0,0,0,.05)
+        ),
+
+        url(
+          "https://lh3.googleusercontent.com/u/0/d/1DhO33-5QA_Tkp-VrzKrPTepyxxH48QD3?q=80&w=1200"
+        )
+        center / cover
+        no-repeat;
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.10);
+
+    }
+
+
+    .intro-image::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      border:
+        1px solid
+        rgba(255,255,255,.18);
+
+      border-radius: inherit;
+
+    }
+
+
+    /* =====================================================
+       ROOMS
+    ====================================================== */
+
+    .rooms {
+
+      background:
+        white;
+
+    }
+
+
+    .rooms-header {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 50px;
+
+    }
+
+
+    .view-all {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding-bottom: 6px;
+
+      border-bottom:
+        1px solid var(--dark);
+
+      font-size: .86rem;
+
+      font-weight: 600;
+
+      transition:
+        gap .3s var(--ease);
+
+    }
+
+
+    .view-all:hover {
+
+      gap: 13px;
+
+    }
+
+
+    /* =====================================================
+       ROOM GRID
+    ====================================================== */
+
+    .rooms-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 20px;
+
+    }
+
+
+    /* =====================================================
+       ROOM CARD
+    ====================================================== */
+
+    .room-card {
+
+      position: relative;
 
       display: block;
 
-      width: 100%;
-      height: 100%;
+      overflow: hidden;
 
-      border: 0;
+      border-radius: 20px;
+
+      background:
+        var(--cream);
+
+      box-shadow:
+        0 3px 0 rgba(0,0,0,.01);
+
+      transition:
+        transform .45s var(--ease),
+        box-shadow .45s ease;
+
+    }
+
+
+    .room-card:hover {
+
+      transform:
+        translateY(-8px);
+
+      box-shadow:
+        0 22px 55px rgba(0,0,0,.11);
+
+    }
+
+
+    /* =====================================================
+       ROOM IMAGE
+    ====================================================== */
+
+    .room-image {
+
+      position: relative;
+
+      height: 285px;
+
+      overflow: hidden;
+
+      background:
+        #ddd
+        center / cover
+        no-repeat;
+
+    }
+
+
+    .room-image::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 55%,
+          rgba(0,0,0,.16)
+        );
+
+      opacity: .7;
+
+      transition:
+        opacity .4s ease;
+
+    }
+
+
+    .room-card:hover
+    .room-image::after {
+
+      opacity: .9;
+
+    }
+
+
+    .room-info {
+
+      padding:
+        23px 22px 25px;
+
+    }
+
+
+    .room-info h3 {
+
+      margin-bottom: 9px;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        1.48rem;
+
+      font-weight: 400;
+
+    }
+
+
+    .room-price {
+
+      color:
+        var(--muted);
+
+      font-size: .82rem;
+
+    }
+
+
+    .room-price strong {
+
+      color:
+        var(--dark);
+
+      font-size:
+        1.15rem;
+
+    }
+
+
+    /* =====================================================
+       CTA
+    ====================================================== */
+
+    .cta {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        var(--dark);
+
+      color: white;
+
+      text-align: center;
+
+    }
+
+
+    .cta::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+
+      height: 500px;
+
+      left: 50%;
+
+      top: 50%;
+
+      transform:
+        translate(-50%,-50%);
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(184,149,91,.10),
+          transparent 65%
+        );
+
+      pointer-events: none;
+
+    }
+
+
+    .cta .section-inner {
+
+      position: relative;
+
+      z-index: 1;
+
+    }
+
+
+    .cta .section-title {
+
+      margin-left: auto;
+
+      margin-right: auto;
+
+    }
+
+
+    .cta .section-text {
+
+      margin:
+        0 auto 35px;
+
+      color:
+        #b9c1bc;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    footer {
+
+      background:
+        #101713;
+
+      color:
+        white;
+
+      padding:
+        48px 6%;
+
+    }
+
+
+    .footer-inner {
+
+      width:
+        min(1200px, 100%);
+
+      margin:
+        0 auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+    }
+
+
+    .footer-logo {
+
+      font-size:
+        1.05rem;
+
+      font-weight: 700;
+
+    }
+
+
+    .footer-text {
+
+      margin-top: 7px;
+
+      color:
+        #89938c;
+
+      font-size:
+        .78rem;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 22px;
+
+      color:
+        #aeb7b1;
+
+      font-size:
+        .77rem;
+
+    }
+
+
+    .footer-links a {
+
+      transition:
+        color .2s ease;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color:
+        white;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .navbar {
+
+        padding:
+          19px 5%;
+
+      }
+
+
+      .nav-links {
+
+        gap: 10px;
+
+      }
+
+
+      .nav-links
+      > a:not(.nav-book) {
+
+        display: none;
+
+      }
+
+
+      .hero {
+
+        height:
+          700px;
+
+        min-height:
+          100svh;
+
+      }
+
+
+      .section {
+
+        padding:
+          90px 6%;
+
+      }
+
+
+      .intro-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          50px;
+
+      }
+
+
+      .intro-image {
+
+        order:
+          2;
+
+        min-height:
+          420px;
+
+      }
+
+
+      .rooms-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .rooms-header {
+
+        align-items:
+          flex-start;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 600px) {
+
+      .navbar {
+
+        padding:
+          17px 5%;
+
+      }
+
+
+      .logo {
+
+        font-size:
+          .98rem;
+
+      }
+
+
+      .nav-book {
+
+        padding:
+          9px 14px;
+
+        font-size:
+          .72rem;
+
+      }
+
+
+      .hero {
+
+        min-height:
+          100svh;
+
+        height:
+          680px;
+
+      }
+
+
+      .hero h1 {
+
+        font-size:
+          clamp(3rem, 14vw, 4.1rem);
+
+        letter-spacing:
+          -.04em;
+
+      }
+
+
+      .hero-eyebrow {
+
+        font-size:
+          .6rem;
+
+        letter-spacing:
+          .22em;
+
+      }
+
+
+      .hero p {
+
+        max-width:
+          340px;
+
+        font-size:
+          .88rem;
+
+      }
+
+
+      .scroll-indicator {
+
+        display:
+          none;
+
+      }
+
+
+      .section {
+
+        padding:
+          72px 5%;
+
+      }
+
+
+      .section-title {
+
+        font-size:
+          2.6rem;
+
+      }
+
+
+      .intro-image {
+
+        min-height:
+          350px;
+
+        border-radius:
+          18px;
+
+      }
+
+
+      .rooms-header {
+
+        display:
+          block;
+
+        margin-bottom:
+          35px;
+
+      }
+
+
+      .view-all {
+
+        margin-top:
+          18px;
+
+      }
+
+
+      .rooms-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          18px;
+
+      }
+
+
+      .room-image {
+
+        height:
+          300px;
+
+      }
+
+
+      .room-info {
+
+        padding:
+          21px;
+
+      }
+
+
+      .cta {
+
+        padding:
+          82px 5%;
+
+      }
+
+
+      .footer-inner {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .footer-links {
+
+        flex-wrap:
+          wrap;
+
+        gap:
+          13px 20px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+
+        scroll-behavior:
+          auto;
+
+      }
+
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+      }
+
+
+      .reveal {
+
+        opacity:
+          1;
+
+        transform:
+          none;
+
+      }
 
     }
 
@@ -240,20 +1765,825 @@
 <body>
 
 
-  <!-- =====================================================
-       APPS SCRIPT WEBSITE
-  ====================================================== -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-  <div class="app-container">
+<header
+  class="navbar"
+  id="navbar">
 
-    <iframe
-      src="https://script.google.com/macros/s/AKfycbxBV6fYHsKpkBIM8g9xslpr6iz__IfvW7ybHvEdQ1Kc0zh3BZr4JZzpKqTLzV881lNviA/exec"
-      title="D'Anjung Cottage Paka"
-      allow="geolocation"
-      allowfullscreen>
-    </iframe>
+
+  <a
+    href="./"
+    class="logo">
+
+    D'Anjung <span>Cottage</span>
+
+  </a>
+
+
+  <nav class="nav-links">
+
+
+    <a
+      href="./">
+
+      About
+
+    </a>
+
+
+    <a
+      href="./Rooms/">
+
+      Rooms
+
+    </a>
+
+
+    <a
+      href="./Contact/">
+
+      Contact
+
+    </a>
+
+
+    <!-- BOOKING REMAINS SEPARATE -->
+
+    <a
+      href="./Book/"
+      class="nav-book">
+
+      Book Your Stay
+
+    </a>
+
+
+  </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="https://lh3.googleusercontent.com/u/0/d/1DhO33-5QA_Tkp-VrzKrPTepyxxH48QD3?q=80&w=1600">
+
+
+    <source
+      src="https://drive.google.com/uc?export=download&id=1xxHcAKocaXu6Z9f4x37IpzNuoTQ2QXXL"
+      type="video/mp4">
+
+  </video>
+
+
+  <div class="hero-overlay"></div>
+
+
+  <div class="hero-content">
+
+
+    <div class="hero-eyebrow">
+
+      D'Anjung Cottage · Paka
+
+    </div>
+
+
+    <h1>
+
+      Stay somewhere<br>
+      that feels like home.
+
+    </h1>
+
+
+    <p>
+
+      A peaceful stay in Paka, Terengganu —
+      designed for comfort, rest and simple moments.
+
+    </p>
+
+
+    <a
+      href="./Book/"
+      class="hero-button">
+
+      Book Your Stay →
+
+    </a>
+
 
   </div>
+
+
+  <div class="scroll-indicator">
+
+    Scroll
+
+    <span class="scroll-line"></span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+  class="section intro"
+  id="about">
+
+
+  <div
+    class="section-inner intro-grid">
+
+
+    <div
+      class="intro-image reveal"
+      aria-label="D'Anjung Cottage">
+
+    </div>
+
+
+    <div class="reveal">
+
+
+      <div class="eyebrow">
+
+        Welcome
+
+      </div>
+
+
+      <h2 class="section-title">
+
+        Relax. Recharge.
+        Rediscover comfort.
+
+      </h2>
+
+
+      <p class="section-text">
+
+        Welcome to D'Anjung Cottage Paka —
+        a peaceful retreat where modern comfort
+        meets local hospitality.
+
+        <br><br>
+
+        Whether you're visiting for work,
+        travelling with family, or simply
+        looking for somewhere quiet to unwind,
+        our cottage offers a clean, secure and
+        comfortable place to stay.
+
+      </p>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ROOMS
+===================================================== -->
+
+<section
+  class="section rooms"
+  id="rooms">
+
+
+  <div class="section-inner">
+
+
+    <div class="rooms-header reveal">
+
+
+      <div>
+
+
+        <div class="eyebrow">
+
+          Accommodation
+
+        </div>
+
+
+        <h2 class="section-title">
+
+          Find your room.
+
+        </h2>
+
+
+      </div>
+
+
+      <a
+        href="./Rooms/"
+        class="view-all">
+
+        View all rooms →
+
+      </a>
+
+
+    </div>
+
+
+
+    <div class="rooms-grid">
+
+
+      <!-- =================================================
+           KING
+      ================================================== -->
+
+      <a
+        href="./Rooms/#king"
+        class="room-card reveal">
+
+
+        <div
+          class="room-image"
+          style="
+            background-image:
+            url('https://lh3.googleusercontent.com/u/0/d/1DhO33-5QA_Tkp-VrzKrPTepyxxH48QD3?q=80&w=1000');
+          ">
+        </div>
+
+
+        <div class="room-info">
+
+
+          <h3>
+
+            King Room
+
+          </h3>
+
+
+          <div class="room-price">
+
+            From
+            <strong>RM 179</strong>
+            / night
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- =================================================
+           TWIN
+      ================================================== -->
+
+      <a
+        href="./Rooms/#twin"
+        class="room-card reveal">
+
+
+        <div
+          class="room-image"
+          style="
+            background-image:
+            url('https://lh3.googleusercontent.com/u/0/d/1GXrqBgT6-lw7lcUND_KJtvL372uwswhg?q=80&w=1000');
+          ">
+        </div>
+
+
+        <div class="room-info">
+
+
+          <h3>
+
+            Twin Room
+
+          </h3>
+
+
+          <div class="room-price">
+
+            From
+            <strong>RM 179</strong>
+            / night
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- =================================================
+           QUEEN
+      ================================================== -->
+
+      <a
+        href="./Rooms/#queen"
+        class="room-card reveal">
+
+
+        <div
+          class="room-image"
+          style="
+            background-image:
+            url('https://lh3.googleusercontent.com/u/0/d/1FxYO9aNv9lSihHtgxeF0kzhnmataaGG?q=80&w=1000');
+          ">
+        </div>
+
+
+        <div class="room-info">
+
+
+          <h3>
+
+            Queen Room
+
+          </h3>
+
+
+          <div class="room-price">
+
+            From
+            <strong>RM 229</strong>
+            / night
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+
+      <!-- =================================================
+           FAMILY
+      ================================================== -->
+
+      <a
+        href="./Rooms/#family"
+        class="room-card reveal">
+
+
+        <div
+          class="room-image"
+          style="
+            background-image:
+            url('https://lh3.googleusercontent.com/u/0/d/153EUqSfTYvzkuxjQwRJM3hmm3MFUTX8x?q=80&w=1000');
+          ">
+        </div>
+
+
+        <div class="room-info">
+
+
+          <h3>
+
+            Family Room
+
+          </h3>
+
+
+          <div class="room-price">
+
+            From
+            <strong>RM 279</strong>
+            / night
+
+          </div>
+
+
+        </div>
+
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="section cta">
+
+
+  <div
+    class="section-inner reveal">
+
+
+    <div class="eyebrow">
+
+      Your stay starts here
+
+    </div>
+
+
+    <h2 class="section-title">
+
+      Ready to slow down?
+
+    </h2>
+
+
+    <p class="section-text">
+
+      Choose your room and make
+      D'Anjung Cottage your home
+      while you're in Paka.
+
+    </p>
+
+
+    <a
+      href="./Book/"
+      class="cta-button">
+
+      Book Your Stay →
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+  <div class="footer-inner">
+
+
+    <div>
+
+
+      <div class="footer-logo">
+
+        D'Anjung Cottage
+
+      </div>
+
+
+      <div class="footer-text">
+
+        Paka, Terengganu · Malaysia
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-links">
+
+
+      <a
+        href="./Policies/">
+
+        Privacy Policy
+
+      </a>
+
+
+      <a
+        href="./Policies/">
+
+        Terms & Conditions
+
+      </a>
+
+
+      <a
+        href="./Contact/">
+
+        Contact Us
+
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+  /* =====================================================
+     NAVBAR
+  ====================================================== */
+
+  const navbar =
+    document.getElementById(
+      "navbar"
+    );
+
+
+  let navbarTicking = false;
+
+
+  function updateNavbar() {
+
+    if (window.scrollY > 45) {
+
+      navbar.classList.add(
+        "scrolled"
+      );
+
+    } else {
+
+      navbar.classList.remove(
+        "scrolled"
+      );
+
+    }
+
+    navbarTicking = false;
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    function () {
+
+      if (!navbarTicking) {
+
+        requestAnimationFrame(
+          updateNavbar
+        );
+
+        navbarTicking = true;
+
+      }
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  updateNavbar();
+
+
+
+  /* =====================================================
+     SCROLL REVEAL
+  ====================================================== */
+
+  const revealElements =
+    document.querySelectorAll(
+      ".reveal"
+    );
+
+
+  if (
+    "IntersectionObserver"
+    in window
+  ) {
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        function (
+          entries,
+          observer
+        ) {
+
+
+          entries.forEach(
+            function (entry) {
+
+
+              if (
+                entry.isIntersecting
+              ) {
+
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+
+        },
+        {
+
+          threshold: .12,
+
+          rootMargin:
+            "0px 0px -50px 0px"
+
+        }
+      );
+
+
+    revealElements.forEach(
+      function (element) {
+
+        revealObserver.observe(
+          element
+        );
+
+      }
+    );
+
+
+  } else {
+
+
+    revealElements.forEach(
+      function (element) {
+
+        element.classList.add(
+          "visible"
+        );
+
+      }
+    );
+
+  }
+
+
+
+  /* =====================================================
+     HERO VIDEO OPTIMISATION
+  ====================================================== */
+
+  const heroVideo =
+    document.querySelector(
+      ".hero-video"
+    );
+
+
+  if (heroVideo) {
+
+
+    /*
+     * Attempt playback after the page loads.
+     * The video is muted and playsinline,
+     * which is suitable for mobile autoplay.
+     */
+
+    heroVideo.play()
+      .catch(
+        function () {}
+      );
+
+
+    /*
+     * Pause the video when the hero
+     * is no longer visible.
+     */
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+
+      const videoObserver =
+        new IntersectionObserver(
+          function (
+            entries
+          ) {
+
+
+            entries.forEach(
+              function (entry) {
+
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  heroVideo.play()
+                    .catch(
+                      function () {}
+                    );
+
+                } else {
+
+                  heroVideo.pause();
+
+                }
+
+              }
+            );
+
+
+          },
+          {
+            threshold: 0.05
+          }
+        );
+
+
+      videoObserver.observe(
+        heroVideo
+      );
+
+    }
+
+  }
+
+
+
+  /* =====================================================
+     MOBILE / CONNECTION FRIENDLY VIDEO
+  ====================================================== */
+
+  /*
+   * Some Android devices or slow connections
+   * may block or delay video autoplay.
+   *
+   * The poster/background image remains visible,
+   * so the hero still works without video.
+   */
+
+  window.addEventListener(
+    "pageshow",
+    function () {
+
+      if (
+        heroVideo &&
+        heroVideo.paused
+      ) {
+
+        heroVideo.play()
+          .catch(
+            function () {}
+          );
+
+      }
+
+    }
+  );
+
+</script>
 
 
 </body>
