@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,17 +54,17 @@
     rel="icon"
     type="image/png"
     sizes="512x512"
-    href="/images/logo.png">
+    href="../images/logo.png">
 
   <link
     rel="shortcut icon"
     type="image/png"
-    href="/images/logo.png">
+    href="../images/logo.png">
 
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="/images/logo.png">
+    href="../images/logo.png">
 
   <meta
     name="apple-mobile-web-app-title"
@@ -188,14 +189,13 @@
 
 
   <!-- =====================================================
-       PRELOAD KING IMAGE
-       TEMPORARY - GOOGLE DRIVE
+       PRELOAD KING MAIN IMAGE
   ====================================================== -->
 
   <link
     rel="preload"
     as="image"
-    href="https://drive.google.com/thumbnail?id=1-Y4NHtD0nazTVmR8U3krKOart9x1GRR5&sz=w1200">
+    href="../images/rooms/king/main.jpg">
 
 
   <!-- =====================================================
@@ -205,7 +205,6 @@
   <style>
 
     :root {
-
       --dark: #17211d;
       --dark-soft: #26332d;
       --cream: #f7f5ef;
@@ -213,7 +212,6 @@
       --muted: #6d756f;
       --accent: #b8955b;
       --line: #e7e4dc;
-
     }
 
 
@@ -224,24 +222,19 @@
     *,
     *::before,
     *::after {
-
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-
     }
 
 
     html {
-
       scroll-behavior: smooth;
       scroll-padding-top: 95px;
-
     }
 
 
     body {
-
       font-family:
         "DM Sans",
         sans-serif;
@@ -254,20 +247,16 @@
 
       overflow-x:
         hidden;
-
     }
 
 
     body.modal-open {
-
       overflow:
         hidden;
-
     }
 
 
     a {
-
       color:
         inherit;
 
@@ -276,15 +265,12 @@
 
       -webkit-tap-highlight-color:
         transparent;
-
     }
 
 
     button {
-
       font-family:
         inherit;
-
     }
 
 
@@ -293,7 +279,6 @@
     ====================================================== */
 
     .page-progress {
-
       position:
         fixed;
 
@@ -317,26 +302,21 @@
 
       transition:
         width .2s ease;
-
     }
 
 
     .page-progress.active {
-
       width:
         70%;
-
     }
 
 
     .page-progress.complete {
-
       width:
         100%;
 
       opacity:
         0;
-
     }
 
 
@@ -345,7 +325,6 @@
     ====================================================== */
 
     .navbar {
-
       position:
         fixed;
 
@@ -390,12 +369,10 @@
         color .25s ease,
         box-shadow .25s ease,
         padding .25s ease;
-
     }
 
 
     .navbar.scrolled {
-
       background:
         rgba(255,255,255,.97);
 
@@ -410,7 +387,6 @@
 
       padding-bottom:
         13px;
-
     }
 
 
@@ -419,7 +395,6 @@
     ====================================================== */
 
     .logo {
-
       font-size:
         1.1rem;
 
@@ -431,18 +406,15 @@
 
       white-space:
         nowrap;
-
     }
 
 
     .logo span {
-
       font-weight:
         400;
 
       opacity:
         .8;
-
     }
 
 
@@ -451,7 +423,6 @@
     ====================================================== */
 
     .nav-links {
-
       display:
         flex;
 
@@ -466,26 +437,21 @@
 
       font-weight:
         500;
-
     }
 
 
     .nav-links a {
-
       opacity:
         .9;
 
       transition:
         opacity .18s ease;
-
     }
 
 
     .nav-links a:hover {
-
       opacity:
         1;
-
     }
 
 
@@ -494,7 +460,6 @@
     ====================================================== */
 
     .nav-book {
-
       background:
         white;
 
@@ -512,19 +477,16 @@
 
       white-space:
         nowrap;
-
     }
 
 
     .navbar.scrolled
     .nav-book {
-
       background:
         var(--dark);
 
       color:
         white;
-
     }
 
 
@@ -533,7 +495,6 @@
     ====================================================== */
 
     .page-hero {
-
       position:
         relative;
 
@@ -574,12 +535,10 @@
           #17211d,
           #2d3c34
         );
-
     }
 
 
     .page-hero::before {
-
       content:
         "";
 
@@ -603,12 +562,10 @@
 
       background:
         rgba(184,149,91,.08);
-
     }
 
 
     .page-hero-content {
-
       position:
         relative;
 
@@ -617,12 +574,10 @@
 
       width:
         min(850px,90%);
-
     }
 
 
     .eyebrow {
-
       color:
         var(--accent);
 
@@ -640,20 +595,16 @@
 
       margin-bottom:
         15px;
-
     }
 
 
     .page-hero .eyebrow {
-
       color:
         #d4b77f;
-
     }
 
 
     .page-hero h1 {
-
       font-family:
         "Playfair Display",
         serif;
@@ -669,12 +620,10 @@
 
       margin-bottom:
         25px;
-
     }
 
 
     .page-hero p {
-
       max-width:
         650px;
 
@@ -689,7 +638,6 @@
 
       font-size:
         1rem;
-
     }
 
 
@@ -698,18 +646,15 @@
     ====================================================== */
 
     .rooms-section {
-
       background:
         var(--cream);
 
       padding:
         110px 6%;
-
     }
 
 
     .rooms-container {
-
       max-width:
         1200px;
 
@@ -721,7 +666,6 @@
 
       gap:
         55px;
-
     }
 
 
@@ -730,7 +674,6 @@
     ====================================================== */
 
     .room-card {
-
       position:
         relative;
 
@@ -758,18 +701,15 @@
 
       scroll-margin-top:
         100px;
-
     }
 
 
     .room-card:hover {
-
       transform:
         translateY(-4px);
 
       box-shadow:
         0 25px 65px rgba(0,0,0,.10);
-
     }
 
 
@@ -778,7 +718,6 @@
     ====================================================== */
 
     .room-media {
-
       position:
         relative;
 
@@ -790,12 +729,10 @@
 
       overflow:
         hidden;
-
     }
 
 
     .room-main-image {
-
       width:
         100%;
 
@@ -816,16 +753,13 @@
 
       transition:
         transform .55s ease;
-
     }
 
 
     .room-card:hover
     .room-main-image {
-
       transform:
         scale(1.025);
-
     }
 
 
@@ -834,7 +768,6 @@
     ====================================================== */
 
     .room-number {
-
       position:
         absolute;
 
@@ -867,7 +800,6 @@
 
       z-index:
         3;
-
     }
 
 
@@ -876,7 +808,6 @@
     ====================================================== */
 
     .media-buttons {
-
       position:
         absolute;
 
@@ -894,12 +825,10 @@
 
       z-index:
         5;
-
     }
 
 
     .media-button {
-
       border:
         none;
 
@@ -930,18 +859,15 @@
       transition:
         transform .2s ease,
         background .2s ease;
-
     }
 
 
     .media-button:hover {
-
       transform:
         translateY(-2px);
 
       background:
         white;
-
     }
 
 
@@ -950,7 +876,6 @@
     ====================================================== */
 
     .room-content {
-
       padding:
         48px;
 
@@ -962,12 +887,10 @@
 
       justify-content:
         center;
-
     }
 
 
     .room-type {
-
       color:
         var(--accent);
 
@@ -985,12 +908,10 @@
 
       margin-bottom:
         12px;
-
     }
 
 
     .room-content h2 {
-
       font-family:
         "Playfair Display",
         serif;
@@ -1006,12 +927,10 @@
 
       margin-bottom:
         12px;
-
     }
 
 
     .room-subtitle {
-
       color:
         #69736d;
 
@@ -1020,12 +939,10 @@
 
       margin-bottom:
         24px;
-
     }
 
 
     .price {
-
       color:
         var(--muted);
 
@@ -1034,23 +951,19 @@
 
       margin-bottom:
         25px;
-
     }
 
 
     .price strong {
-
       color:
         var(--dark);
 
       font-size:
         1.55rem;
-
     }
 
 
     .description {
-
       color:
         var(--muted);
 
@@ -1062,7 +975,6 @@
 
       margin-bottom:
         26px;
-
     }
 
 
@@ -1071,7 +983,6 @@
     ====================================================== */
 
     .features {
-
       display:
         grid;
 
@@ -1083,12 +994,10 @@
 
       margin-bottom:
         30px;
-
     }
 
 
     .feature {
-
       background:
         var(--cream);
 
@@ -1103,7 +1012,6 @@
 
       color:
         #58635d;
-
     }
 
 
@@ -1112,7 +1020,6 @@
     ====================================================== */
 
     .room-actions {
-
       display:
         flex;
 
@@ -1124,12 +1031,10 @@
 
       align-items:
         center;
-
     }
 
 
     .book-button {
-
       display:
         inline-flex;
 
@@ -1156,12 +1061,10 @@
 
       font-size:
         .86rem;
-
     }
 
 
     .details-button {
-
       display:
         inline-flex;
 
@@ -1174,11 +1077,11 @@
       padding:
         13px 20px;
 
-      border-radius:
-        35px;
-
       border:
         1px solid var(--line);
+
+      border-radius:
+        35px;
 
       color:
         var(--dark);
@@ -1188,7 +1091,6 @@
 
       font-size:
         .84rem;
-
     }
 
 
@@ -1197,7 +1099,6 @@
     ====================================================== */
 
     .cta {
-
       background:
         var(--dark);
 
@@ -1209,31 +1110,25 @@
 
       padding:
         110px 6%;
-
     }
 
 
     .cta .section-inner {
-
       max-width:
         850px;
 
       margin:
         auto;
-
     }
 
 
     .cta .eyebrow {
-
       color:
         #d4b77f;
-
     }
 
 
     .cta .section-title {
-
       font-family:
         "Playfair Display",
         serif;
@@ -1249,12 +1144,10 @@
 
       margin-bottom:
         25px;
-
     }
 
 
     .cta .section-text {
-
       max-width:
         650px;
 
@@ -1266,12 +1159,10 @@
 
       line-height:
         1.8;
-
     }
 
 
     .cta-button {
-
       display:
         inline-flex;
 
@@ -1295,17 +1186,14 @@
 
       font-weight:
         600;
-
     }
 
 
     /* =====================================================
        GALLERY MODAL
-       TEMPORARY - KEEPING EXISTING DRIVE GALLERY
     ====================================================== */
 
     .gallery-modal {
-
       position:
         fixed;
 
@@ -1335,20 +1223,16 @@
 
       overflow:
         hidden;
-
     }
 
 
     .gallery-modal.active {
-
       display:
         flex;
-
     }
 
 
     .gallery-box {
-
       width:
         100%;
 
@@ -1375,12 +1259,10 @@
 
       position:
         relative;
-
     }
 
 
     .gallery-image {
-
       display:
         block;
 
@@ -1410,12 +1292,10 @@
 
       box-shadow:
         0 15px 50px rgba(0,0,0,.35);
-
     }
 
 
     .gallery-close {
-
       position:
         fixed;
 
@@ -1463,12 +1343,10 @@
 
       z-index:
         10;
-
     }
 
 
     .gallery-controls {
-
       display:
         flex;
 
@@ -1483,12 +1361,10 @@
 
       margin-top:
         18px;
-
     }
 
 
     .gallery-control {
-
       width:
         46px;
 
@@ -1512,12 +1388,10 @@
 
       font-size:
         1.15rem;
-
     }
 
 
     .gallery-counter {
-
       color:
         white;
 
@@ -1529,7 +1403,6 @@
 
       opacity:
         .8;
-
     }
 
 
@@ -1538,7 +1411,6 @@
     ====================================================== */
 
     .video-modal {
-
       position:
         fixed;
 
@@ -1568,20 +1440,16 @@
 
       overflow:
         hidden;
-
     }
 
 
     .video-modal.active {
-
       display:
         flex;
-
     }
 
 
     .video-container {
-
       width:
         min(1000px,100%);
 
@@ -1596,12 +1464,10 @@
 
       justify-content:
         center;
-
     }
 
 
-    .video-container iframe {
-
+    .video-container video {
       display:
         block;
 
@@ -1625,12 +1491,10 @@
 
       background:
         black;
-
     }
 
 
     .video-close {
-
       position:
         fixed;
 
@@ -1675,7 +1539,6 @@
 
       z-index:
         10;
-
     }
 
 
@@ -1684,7 +1547,6 @@
     ====================================================== */
 
     footer {
-
       background:
         #101713;
 
@@ -1693,12 +1555,10 @@
 
       padding:
         45px 6%;
-
     }
 
 
     .footer-inner {
-
       max-width:
         1200px;
 
@@ -1713,23 +1573,19 @@
 
       gap:
         30px;
-
     }
 
 
     .footer-logo {
-
       font-size:
         1.1rem;
 
       font-weight:
         700;
-
     }
 
 
     .footer-text {
-
       color:
         #8f9992;
 
@@ -1738,12 +1594,10 @@
 
       margin-top:
         8px;
-
     }
 
 
     .footer-links {
-
       display:
         flex;
 
@@ -1758,7 +1612,6 @@
 
       align-items:
         center;
-
     }
 
 
@@ -1769,85 +1622,65 @@
     @media (max-width:850px) {
 
       .nav-links {
-
         gap:
           8px;
-
       }
 
 
       .nav-links a:not(.nav-book) {
-
         display:
           none;
-
       }
 
 
       .navbar {
-
         padding:
           17px 5%;
-
       }
 
 
       .page-hero {
-
         min-height:
           500px;
 
         padding:
           145px 6% 80px;
-
       }
 
 
       .rooms-section {
-
         padding:
           80px 6%;
-
       }
 
 
       .room-card {
-
         grid-template-columns:
           1fr;
-
       }
 
 
       .room-media {
-
         min-height:
           390px;
-
       }
 
 
       .room-main-image {
-
         min-height:
           390px;
-
       }
 
 
       .room-content {
-
         padding:
           40px;
-
       }
 
 
       .room-content h2 {
-
         font-size:
           2.35rem;
-
       }
 
     }
@@ -1860,23 +1693,18 @@
     @media (max-width:550px) {
 
       html {
-
         scroll-padding-top:
           82px;
-
       }
 
 
       body {
-
         width:
           100%;
-
       }
 
 
       .navbar {
-
         min-height:
           66px;
 
@@ -1891,12 +1719,10 @@
 
         box-shadow:
           0 3px 18px rgba(0,0,0,.12);
-
       }
 
 
       .navbar.scrolled {
-
         background:
           rgba(255,255,255,.98);
 
@@ -1905,123 +1731,97 @@
 
         padding:
           11px 16px;
-
       }
 
 
       .logo {
-
         font-size:
           .92rem;
-
       }
 
 
       .nav-links {
-
         display:
           flex;
 
         gap:
           7px;
-
       }
 
 
       .nav-links a:not(.nav-book) {
-
         display:
           none;
-
       }
 
 
       .nav-book {
-
         padding:
           9px 13px;
 
         font-size:
           .72rem;
-
       }
 
 
       .page-hero {
-
         min-height:
           460px;
 
         padding:
           125px 6% 65px;
-
       }
 
 
       .page-hero h1 {
-
         font-size:
           3.05rem;
-
       }
 
 
       .page-hero p {
-
         font-size:
           .88rem;
 
         line-height:
           1.7;
-
       }
 
 
       .rooms-section {
-
         padding:
           55px 5%;
-
       }
 
 
       .rooms-container {
-
         gap:
           32px;
-
       }
 
 
       .room-card {
-
         border-radius:
           17px;
-
       }
 
 
       .room-card:hover {
-
         transform:
           none;
-
       }
 
 
       .room-media {
-
         min-height:
           280px;
 
         height:
           280px;
-
       }
 
 
       .room-main-image {
-
         min-height:
           280px;
 
@@ -2030,12 +1830,10 @@
 
         object-fit:
           cover;
-
       }
 
 
       .room-number {
-
         top:
           13px;
 
@@ -2047,12 +1845,10 @@
 
         padding:
           7px 11px;
-
       }
 
 
       .media-buttons {
-
         left:
           11px;
 
@@ -2061,94 +1857,74 @@
 
         gap:
           6px;
-
       }
 
 
       .media-button {
-
         padding:
           9px 11px;
 
         font-size:
           .69rem;
-
       }
 
 
       .room-content {
-
         padding:
           27px 22px;
-
       }
 
 
       .room-content h2 {
-
         font-size:
           2rem;
-
       }
 
 
       .room-subtitle {
-
         font-size:
           .84rem;
-
       }
 
 
       .description {
-
         font-size:
           .87rem;
-
       }
 
 
       .features {
-
         grid-template-columns:
           1fr;
 
         gap:
           8px;
-
       }
 
 
       .room-actions {
-
         flex-direction:
           column;
 
         align-items:
           stretch;
-
       }
 
 
       .book-button,
       .details-button {
-
         width:
           100%;
-
       }
 
 
       .gallery-modal {
-
         padding:
           70px 10px 18px;
-
       }
 
 
       .gallery-box {
-
         width:
           100%;
 
@@ -2160,12 +1936,10 @@
 
         justify-content:
           center;
-
       }
 
 
       .gallery-image {
-
         width:
           100%;
 
@@ -2180,12 +1954,10 @@
 
         border-radius:
           8px;
-
       }
 
 
       .gallery-close {
-
         top:
           12px;
 
@@ -2200,55 +1972,43 @@
 
         font-size:
           29px;
-
       }
 
 
       .gallery-controls {
-
         margin-top:
           13px;
-
       }
 
 
       .gallery-control {
-
         width:
           43px;
 
         height:
           43px;
-
       }
 
 
       .gallery-counter {
-
         margin-top:
           8px;
-
       }
 
 
       .video-modal {
-
         padding:
           65px 10px 20px;
-
       }
 
 
       .video-container {
-
         width:
           100%;
-
       }
 
 
-      .video-container iframe {
-
+      .video-container video {
         width:
           100%;
 
@@ -2263,12 +2023,10 @@
 
         border-radius:
           8px;
-
       }
 
 
       .video-close {
-
         top:
           12px;
 
@@ -2283,31 +2041,24 @@
 
         font-size:
           29px;
-
       }
 
 
       .cta {
-
         padding:
           75px 6%;
-
       }
 
 
       .footer-inner {
-
         flex-direction:
           column;
-
       }
 
 
       .footer-links {
-
         flex-wrap:
           wrap;
-
       }
 
     }
@@ -2320,48 +2071,38 @@
     @media (max-width:380px) {
 
       .logo {
-
         font-size:
           .82rem;
-
       }
 
 
       .nav-book {
-
         padding:
           8px 10px;
 
         font-size:
           .67rem;
-
       }
 
 
       .page-hero h1 {
-
         font-size:
           2.7rem;
-
       }
 
 
       .media-button {
-
         padding:
           8px 9px;
 
         font-size:
           .64rem;
-
       }
 
 
       .gallery-image {
-
         max-height:
           calc(100vh - 165px);
-
       }
 
     }
@@ -2374,23 +2115,19 @@
     @media (prefers-reduced-motion:reduce) {
 
       html {
-
         scroll-behavior:
           auto;
-
       }
 
 
       *,
       *::before,
       *::after {
-
         animation:
           none !important;
 
         transition:
           none !important;
-
       }
 
     }
@@ -2403,1599 +2140,1469 @@
 <body>
 
 
-<!-- =====================================================
-     PAGE PROGRESS
-===================================================== -->
-
-<div
-  class="page-progress"
-  id="pageProgress">
-</div>
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<header
-  class="navbar"
-  id="navbar">
-
-  <a
-    href="/"
-    class="logo">
-
-    D'Anjung <span>Cottage</span>
-
-  </a>
-
-
-  <nav class="nav-links">
-
-    <a
-      href="/">
-
-      About
-
-    </a>
-
-
-    <a
-      href="/Rooms/">
-
-      Rooms
-
-    </a>
-
-
-    <a
-      href="/Contact/">
-
-      Contact
-
-    </a>
-
-
-    <a
-      href="https://book.danjungcottage.com/"
-      class="nav-book">
-
-      Book Your Stay
-
-    </a>
-
-  </nav>
-
-</header>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="page-hero">
-
-  <div class="page-hero-content">
-
-    <div class="eyebrow">
-
-      D'Anjung Cottage · Paka
-
-    </div>
-
-
-    <h1>
-      Your room awaits.
-    </h1>
-
-
-    <p>
-
-      Discover comfortable spaces designed
-      for peaceful stays, family moments,
-      business trips and relaxing getaways
-      in Paka, Terengganu.
-
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     ROOMS
-===================================================== -->
-
-<section class="rooms-section">
-
-<div class="rooms-container">
-
-
-<!-- =====================================================
-     KING ROOM
-===================================================== -->
-
-<article
-  class="room-card"
-  id="king">
-
-  <div class="room-media">
-
-    <img
-      class="room-main-image"
-      src="https://drive.google.com/thumbnail?id=1-Y4NHtD0nazTVmR8U3krKOart9x1GRR5&sz=w1200"
-      alt="King Room at D'Anjung Cottage Paka"
-      width="1200"
-      height="800"
-      fetchpriority="high"
-      decoding="async">
-
-
-    <div class="room-number">
-      ROOM 01
-    </div>
-
-
-    <div class="media-buttons">
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openGallery('king')">
-
-        View Photos
-
-      </button>
-
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openVideo('king')">
-
-        ▶ Room Video
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <div class="room-content">
-
-    <div class="room-type">
-      Comfortable · Couple · Business
-    </div>
-
-
-    <h2>
-      King Room
-    </h2>
-
-
-    <div class="room-subtitle">
-      A comfortable room for a relaxing stay.
-    </div>
-
-
-    <div class="price">
-      From <strong>RM 179</strong> / night
-    </div>
-
-
-    <p class="description">
-
-      A cosy and practical room designed
-      for guests who value comfort, privacy
-      and a peaceful place to rest after
-      a day in Paka.
-
-    </p>
-
-
-    <div class="features">
-
-      <div class="feature">
-        🛏 King Bed
-      </div>
-
-      <div class="feature">
-        ❄ Air Conditioning
-      </div>
-
-      <div class="feature">
-        📶 Free Wi-Fi
-      </div>
-
-      <div class="feature">
-        🚿 Private Bathroom
-      </div>
-
-    </div>
-
-
-    <div class="room-actions">
-
-      <a
-        href="/Rooms/#king"
-        class="details-button">
-
-        Room Details →
-
-      </a>
-
-
-      <a
-        href="https://book.danjungcottage.com/"
-        class="book-button">
-
-        Book This Room
-
-      </a>
-
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- =====================================================
-     TWIN ROOM
-===================================================== -->
-
-<article
-  class="room-card"
-  id="twin">
-
-  <div class="room-media">
-
-    <img
-      class="room-main-image"
-      src="https://drive.google.com/thumbnail?id=1Bn43LGXV0Zj9nrvhhrQNFRBgxNWkqmg5&sz=w1200"
-      alt="Twin Room at D'Anjung Cottage Paka"
-      width="1200"
-      height="800"
-      loading="lazy"
-      decoding="async">
-
-
-    <div class="room-number">
-      ROOM 02
-    </div>
-
-
-    <div class="media-buttons">
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openGallery('twin')">
-
-        View Photos
-
-      </button>
-
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openVideo('twin')">
-
-        ▶ Room Video
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <div class="room-content">
-
-    <div class="room-type">
-      Twin Beds · Friends · Business
-    </div>
-
-
-    <h2>
-      Twin Room
-    </h2>
-
-
-    <div class="room-subtitle">
-      Flexible comfort for two guests.
-    </div>
-
-
-    <div class="price">
-      From <strong>RM 179</strong> / night
-    </div>
-
-
-    <p class="description">
-
-      An inviting room with two separate beds,
-      ideal for friends, colleagues or guests
-      travelling together who prefer their own
-      sleeping space.
-
-    </p>
-
-
-    <div class="features">
-
-      <div class="feature">
-        🛏 Twin Beds
-      </div>
-
-      <div class="feature">
-        ❄ Air Conditioning
-      </div>
-
-      <div class="feature">
-        📶 Free Wi-Fi
-      </div>
-
-      <div class="feature">
-        🚿 Private Bathroom
-      </div>
-
-    </div>
-
-
-    <div class="room-actions">
-
-      <a
-        href="/Rooms/#twin"
-        class="details-button">
-
-        Room Details →
-
-      </a>
-
-
-      <a
-        href="https://book.danjungcottage.com/"
-        class="book-button">
-
-        Book This Room
-
-      </a>
-
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- =====================================================
-     QUEEN ROOM
-===================================================== -->
-
-<article
-  class="room-card"
-  id="queen">
-
-  <div class="room-media">
-
-    <img
-      class="room-main-image"
-      src="https://drive.google.com/thumbnail?id=1jY5KEU8v8Mf2mmtgD2kmtRX3Xwat8ki2&sz=w1200"
-      alt="Queen Room at D'Anjung Cottage Paka"
-      width="1200"
-      height="800"
-      loading="lazy"
-      decoding="async">
-
-
-    <div class="room-number">
-      ROOM 03
-    </div>
-
-
-    <div class="media-buttons">
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openGallery('queen')">
-
-        View Photos
-
-      </button>
-
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openVideo('queen')">
-
-        ▶ Room Video
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <div class="room-content">
-
-    <div class="room-type">
-      Queen Bed · Couple · Comfort
-    </div>
-
-
-    <h2>
-      Queen Room
-    </h2>
-
-
-    <div class="room-subtitle">
-      A little more space to unwind.
-    </div>
-
-
-    <div class="price">
-      From <strong>RM 229</strong> / night
-    </div>
-
-
-    <p class="description">
-
-      A comfortable choice for couples
-      and guests looking for a little extra
-      room to relax during their stay
-      in Paka.
-
-    </p>
-
-
-    <div class="features">
-
-      <div class="feature">
-        🛏 Queen Bed
-      </div>
-
-      <div class="feature">
-        ❄ Air Conditioning
-      </div>
-
-      <div class="feature">
-        📶 Free Wi-Fi
-      </div>
-
-      <div class="feature">
-        🚿 Private Bathroom
-      </div>
-
-    </div>
-
-
-    <div class="room-actions">
-
-      <a
-        href="/Rooms/#queen"
-        class="details-button">
-
-        Room Details →
-
-      </a>
-
-
-      <a
-        href="https://book.danjungcottage.com/"
-        class="book-button">
-
-        Book This Room
-
-      </a>
-
-    </div>
-
-  </div>
-
-</article>
-
-
-<!-- =====================================================
-     FAMILY ROOM
-===================================================== -->
-
-<article
-  class="room-card"
-  id="family">
-
-  <div class="room-media">
-
-    <img
-      class="room-main-image"
-      src="https://drive.google.com/thumbnail?id=1VmIthbHp-E0DHaWJxetlaGo6Wip-LC17&sz=w1200"
-      alt="Family Room at D'Anjung Cottage Paka"
-      width="1200"
-      height="800"
-      loading="lazy"
-      decoding="async">
-
-
-    <div class="room-number">
-      ROOM 04
-    </div>
-
-
-    <div class="media-buttons">
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openGallery('family')">
-
-        View Photos
-
-      </button>
-
-
-      <button
-        type="button"
-        class="media-button"
-        onclick="openVideo('family')">
-
-        ▶ Room Video
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <div class="room-content">
-
-    <div class="room-type">
-      Family · Spacious · Comfortable
-    </div>
-
-
-    <h2>
-      Family Room
-    </h2>
-
-
-    <div class="room-subtitle">
-      More space for the people who matter.
-    </div>
-
-
-    <div class="price">
-      From <strong>RM 279</strong> / night
-    </div>
-
-
-    <p class="description">
-
-      Designed for families and small groups,
-      offering a comfortable space to rest,
-      reconnect and enjoy a convenient stay
-      in Paka.
-
-    </p>
-
-
-    <div class="features">
-
-      <div class="feature">
-        👨‍👩‍👧 Family Friendly
-      </div>
-
-      <div class="feature">
-        ❄ Air Conditioning
-      </div>
-
-      <div class="feature">
-        📶 Free Wi-Fi
-      </div>
-
-      <div class="feature">
-        🚿 Private Bathroom
-      </div>
-
-    </div>
-
-
-    <div class="room-actions">
-
-      <a
-        href="/Rooms/#family"
-        class="details-button">
-
-        Room Details →
-
-      </a>
-
-
-      <a
-        href="https://book.danjungcottage.com/"
-        class="book-button">
-
-        Book This Room
-
-      </a>
-
-    </div>
-
-  </div>
-
-</article>
-
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta">
-
-<div class="section-inner">
-
-  <div class="eyebrow">
-    Your stay starts here
-  </div>
-
-
-  <h2 class="section-title">
-    Ready to find your room?
-  </h2>
-
-
-  <p class="section-text">
-
-    Choose the room that suits your stay
-    and make D'Anjung Cottage your home
-    while you're in Paka.
-
-  </p>
-
-
-  <a
-    href="https://book.danjungcottage.com/"
-    class="cta-button">
-
-    Book Your Stay →
-
-  </a>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     GALLERY MODAL
-     TEMPORARY - EXISTING DRIVE IMAGES
-===================================================== -->
-
-<div
-  class="gallery-modal"
-  id="galleryModal">
+  <!-- =====================================================
+       PAGE PROGRESS
+  ====================================================== -->
 
   <div
-    class="gallery-box"
-    id="galleryBox">
+    class="page-progress"
+    id="pageProgress">
+  </div>
 
 
-    <button
-      type="button"
-      class="gallery-close"
-      onclick="closeGallery()"
-      aria-label="Close gallery">
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
 
-      ×
+  <header
+    class="navbar"
+    id="navbar">
 
-    </button>
+    <a
+      href="../"
+      class="logo">
 
+      D'Anjung <span>Cottage</span>
 
-    <img
-      id="galleryImage"
-      class="gallery-image"
-      src=""
-      alt="Room photo">
-
-
-    <div class="gallery-controls">
-
-      <button
-        type="button"
-        class="gallery-control"
-        onclick="previousImage()"
-        aria-label="Previous photo">
-
-        ←
-
-      </button>
+    </a>
 
 
-      <button
-        type="button"
-        class="gallery-control"
-        onclick="nextImage()"
-        aria-label="Next photo">
+    <nav class="nav-links">
 
-        →
+      <a href="../">
+        About
+      </a>
 
-      </button>
+      <a href="./">
+        Rooms
+      </a>
+
+      <a href="../Contact/">
+        Contact
+      </a>
+
+      <a
+        href="https://book.danjungcottage.com/"
+        class="nav-book">
+
+        Book Your Stay
+
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="page-hero">
+
+    <div class="page-hero-content">
+
+      <div class="eyebrow">
+        D'Anjung Cottage · Paka
+      </div>
+
+      <h1>
+        Your room awaits.
+      </h1>
+
+      <p>
+        Discover comfortable spaces designed
+        for peaceful stays, family moments,
+        business trips and relaxing getaways
+        in Paka, Terengganu.
+      </p>
 
     </div>
 
+  </section>
+
+
+  <!-- =====================================================
+       ROOMS
+  ====================================================== -->
+
+  <section class="rooms-section">
+
+    <div class="rooms-container">
+
+
+      <!-- =====================================================
+           KING ROOM
+      ====================================================== -->
+
+      <article
+        class="room-card"
+        id="king">
+
+        <div class="room-media">
+
+          <img
+            class="room-main-image"
+            src="../images/rooms/king/main.jpg"
+            alt="King Room at D'Anjung Cottage Paka"
+            width="1200"
+            height="800"
+            fetchpriority="high"
+            decoding="async">
+
+          <div class="room-number">
+            ROOM 01
+          </div>
+
+          <div class="media-buttons">
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openGallery('king')">
+
+              View Photos
+
+            </button>
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openVideo('king')">
+
+              ▶ Room Video
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="room-content">
+
+          <div class="room-type">
+            Comfortable · Couple · Business
+          </div>
+
+          <h2>
+            King Room
+          </h2>
+
+          <div class="room-subtitle">
+            A comfortable room for a relaxing stay.
+          </div>
+
+          <div class="price">
+            From <strong>RM 179</strong> / night
+          </div>
+
+          <p class="description">
+            A cosy and practical room designed
+            for guests who value comfort, privacy
+            and a peaceful place to rest after
+            a day in Paka.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              🛏 King Bed
+            </div>
+
+            <div class="feature">
+              ❄ Air Conditioning
+            </div>
+
+            <div class="feature">
+              📶 Free Wi-Fi
+            </div>
+
+            <div class="feature">
+              🚿 Private Bathroom
+            </div>
+
+          </div>
+
+          <div class="room-actions">
+
+            <a
+              href="#king"
+              class="details-button">
+
+              Room Details →
+
+            </a>
+
+            <a
+              href="https://book.danjungcottage.com/"
+              class="book-button">
+
+              Book This Room
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           TWIN ROOM
+      ====================================================== -->
+
+      <article
+        class="room-card"
+        id="twin">
+
+        <div class="room-media">
+
+          <img
+            class="room-main-image"
+            src="../images/rooms/twin/main.jpg"
+            alt="Twin Room at D'Anjung Cottage Paka"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async">
+
+          <div class="room-number">
+            ROOM 02
+          </div>
+
+          <div class="media-buttons">
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openGallery('twin')">
+
+              View Photos
+
+            </button>
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openVideo('twin')">
+
+              ▶ Room Video
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="room-content">
+
+          <div class="room-type">
+            Twin Beds · Friends · Business
+          </div>
+
+          <h2>
+            Twin Room
+          </h2>
+
+          <div class="room-subtitle">
+            Flexible comfort for two guests.
+          </div>
+
+          <div class="price">
+            From <strong>RM 179</strong> / night
+          </div>
+
+          <p class="description">
+            An inviting room with two separate beds,
+            ideal for friends, colleagues or guests
+            travelling together who prefer their own
+            sleeping space.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              🛏 Twin Beds
+            </div>
+
+            <div class="feature">
+              ❄ Air Conditioning
+            </div>
+
+            <div class="feature">
+              📶 Free Wi-Fi
+            </div>
+
+            <div class="feature">
+              🚿 Private Bathroom
+            </div>
+
+          </div>
+
+          <div class="room-actions">
+
+            <a
+              href="#twin"
+              class="details-button">
+
+              Room Details →
+
+            </a>
+
+            <a
+              href="https://book.danjungcottage.com/"
+              class="book-button">
+
+              Book This Room
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           QUEEN ROOM
+      ====================================================== -->
+
+      <article
+        class="room-card"
+        id="queen">
+
+        <div class="room-media">
+
+          <img
+            class="room-main-image"
+            src="../images/rooms/queen/main.jpg"
+            alt="Queen Room at D'Anjung Cottage Paka"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async">
+
+          <div class="room-number">
+            ROOM 03
+          </div>
+
+          <div class="media-buttons">
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openGallery('queen')">
+
+              View Photos
+
+            </button>
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openVideo('queen')">
+
+              ▶ Room Video
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="room-content">
+
+          <div class="room-type">
+            Queen Bed · Couple · Comfort
+          </div>
+
+          <h2>
+            Queen Room
+          </h2>
+
+          <div class="room-subtitle">
+            A little more space to unwind.
+          </div>
+
+          <div class="price">
+            From <strong>RM 229</strong> / night
+          </div>
+
+          <p class="description">
+            A comfortable choice for couples
+            and guests looking for a little extra
+            room to relax during their stay
+            in Paka.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              🛏 Queen Bed
+            </div>
+
+            <div class="feature">
+              ❄ Air Conditioning
+            </div>
+
+            <div class="feature">
+              📶 Free Wi-Fi
+            </div>
+
+            <div class="feature">
+              🚿 Private Bathroom
+            </div>
+
+          </div>
+
+          <div class="room-actions">
+
+            <a
+              href="#queen"
+              class="details-button">
+
+              Room Details →
+
+            </a>
+
+            <a
+              href="https://book.danjungcottage.com/"
+              class="book-button">
+
+              Book This Room
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           FAMILY ROOM
+      ====================================================== -->
+
+      <article
+        class="room-card"
+        id="family">
+
+        <div class="room-media">
+
+          <img
+            class="room-main-image"
+            src="../images/rooms/family/main.jpg"
+            alt="Family Room at D'Anjung Cottage Paka"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async">
+
+          <div class="room-number">
+            ROOM 04
+          </div>
+
+          <div class="media-buttons">
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openGallery('family')">
+
+              View Photos
+
+            </button>
+
+            <button
+              type="button"
+              class="media-button"
+              onclick="openVideo('family')">
+
+              ▶ Room Video
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="room-content">
+
+          <div class="room-type">
+            Family · Spacious · Comfortable
+          </div>
+
+          <h2>
+            Family Room
+          </h2>
+
+          <div class="room-subtitle">
+            More space for the people who matter.
+          </div>
+
+          <div class="price">
+            From <strong>RM 279</strong> / night
+          </div>
+
+          <p class="description">
+            Designed for families and small groups,
+            offering a comfortable space to rest,
+            reconnect and enjoy a convenient stay
+            in Paka.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              👨‍👩‍👧 Family Friendly
+            </div>
+
+            <div class="feature">
+              ❄ Air Conditioning
+            </div>
+
+            <div class="feature">
+              📶 Free Wi-Fi
+            </div>
+
+            <div class="feature">
+              🚿 Private Bathroom
+            </div>
+
+          </div>
+
+          <div class="room-actions">
+
+            <a
+              href="#family"
+              class="details-button">
+
+              Room Details →
+
+            </a>
+
+            <a
+              href="https://book.danjungcottage.com/"
+              class="book-button">
+
+              Book This Room
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CTA
+  ====================================================== -->
+
+  <section class="cta">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Your stay starts here
+      </div>
+
+      <h2 class="section-title">
+        Ready to find your room?
+      </h2>
+
+      <p class="section-text">
+        Choose the room that suits your stay
+        and make D'Anjung Cottage your home
+        while you're in Paka.
+      </p>
+
+      <a
+        href="https://book.danjungcottage.com/"
+        class="cta-button">
+
+        Book Your Stay →
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       GALLERY MODAL
+  ====================================================== -->
+
+  <div
+    class="gallery-modal"
+    id="galleryModal">
 
     <div
-      class="gallery-counter"
-      id="galleryCounter">
+      class="gallery-box"
+      id="galleryBox">
+
+      <button
+        type="button"
+        class="gallery-close"
+        onclick="closeGallery()"
+        aria-label="Close gallery">
+
+        ×
+
+      </button>
+
+      <img
+        id="galleryImage"
+        class="gallery-image"
+        src=""
+        alt="Room photo">
+
+      <div class="gallery-controls">
+
+        <button
+          type="button"
+          class="gallery-control"
+          onclick="previousImage()"
+          aria-label="Previous photo">
+
+          ←
+
+        </button>
+
+        <button
+          type="button"
+          class="gallery-control"
+          onclick="nextImage()"
+          aria-label="Next photo">
+
+          →
+
+        </button>
+
+      </div>
+
+      <div
+        class="gallery-counter"
+        id="galleryCounter">
+      </div>
+
     </div>
 
   </div>
 
-</div>
 
-
-<!-- =====================================================
-     VIDEO MODAL
-===================================================== -->
-
-<div
-  class="video-modal"
-  id="videoModal">
+  <!-- =====================================================
+       VIDEO MODAL
+  ====================================================== -->
 
   <div
-    class="video-container">
+    class="video-modal"
+    id="videoModal">
 
+    <div
+      class="video-container">
 
-    <button
-      type="button"
-      class="video-close"
-      onclick="closeVideo()"
-      aria-label="Close video">
+      <button
+        type="button"
+        class="video-close"
+        onclick="closeVideo()"
+        aria-label="Close video">
 
-      ×
+        ×
 
-    </button>
+      </button>
 
+      <video
+        id="roomVideo"
+        controls
+        playsinline
+        preload="metadata"
+        title="D'Anjung Cottage room video">
+      </video>
 
-    <iframe
-      id="roomVideoFrame"
-      src=""
-      title="D'Anjung Cottage room video"
-      allow="autoplay; fullscreen"
-      allowfullscreen>
-    </iframe>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-<div class="footer-inner">
-
-  <div>
-
-    <div class="footer-logo">
-      D'Anjung Cottage
-    </div>
-
-
-    <div class="footer-text">
-      Paka, Terengganu · Malaysia
     </div>
 
   </div>
 
 
-  <div class="footer-links">
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
-    <a
-      href="/Policies/">
+  <footer>
 
-      Privacy Policy
+    <div class="footer-inner">
 
-    </a>
+      <div>
 
+        <div class="footer-logo">
+          D'Anjung Cottage
+        </div>
 
-    <a
-      href="/Policies/">
+        <div class="footer-text">
+          Paka, Terengganu · Malaysia
+        </div>
 
-      Terms & Conditions
+      </div>
 
-    </a>
+      <div class="footer-links">
 
+        <a href="../Policies/">
+          Privacy Policy
+        </a>
 
-    <a
-      href="/Contact/">
+        <a href="../Policies/">
+          Terms & Conditions
+        </a>
 
-      Contact Us
+        <a href="../Contact/">
+          Contact Us
+        </a>
 
-    </a>
+      </div>
 
-  </div>
+    </div>
 
-</div>
+  </footer>
 
-</footer>
 
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+  <script>
 
-<script>
+    /* =====================================================
+       NAVIGATION
+    ====================================================== */
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+    const navbar =
+      document.getElementById("navbar");
 
-const navbar =
-  document.getElementById("navbar");
 
+    function updateNavbar() {
 
-function updateNavbar() {
+      if (window.scrollY > 40) {
 
-  if (
-    window.scrollY > 40
-  ) {
+        navbar.classList.add("scrolled");
 
-    navbar.classList.add("scrolled");
+      } else {
 
-  } else {
-
-    navbar.classList.remove("scrolled");
-
-  }
-
-}
-
-
-window.addEventListener(
-  "scroll",
-  updateNavbar,
-  {
-    passive: true
-  }
-);
-
-
-updateNavbar();
-
-
-/* =====================================================
-   GOOGLE DRIVE IMAGE HELPER
-   TEMPORARY
-===================================================== */
-
-function driveImage(id, size = 1600) {
-
-  return (
-    "https://drive.google.com/thumbnail?id=" +
-    id +
-    "&sz=w" +
-    size
-  );
-
-}
-
-
-/* =====================================================
-   ROOM GALLERIES
-   TEMPORARY - WILL MIGRATE LATER
-===================================================== */
-
-const roomGalleries = {
-
-
-  king: [
-
-    driveImage(
-      "1GsbsrqcMbNTLZSFks4xmgw5o_jHtgbWn"
-    ),
-
-    driveImage(
-      "1vQNTWIGV6IZhbEMV5j6vHHl32eGW-578"
-    ),
-
-    driveImage(
-      "1MLGBE_7o8zFTI7GJeEQmviY9GGYl7TJc"
-    ),
-
-    driveImage(
-      "1DhO33-5QA_Tkp-VrzKrPTepyxxH48QD3"
-    ),
-
-    driveImage(
-      "1EiY_Wch0pUx6i_Pv6GFIo6nwe-L8pvyP"
-    ),
-
-    driveImage(
-      "1bxe4yynRmgdy4nDOFXKnHU5576RZAYJU"
-    )
-
-  ],
-
-
-  twin: [
-
-    driveImage(
-      "1UTQIRlx4iBqfB7F5T82ADyNCCve9Sgym"
-    ),
-
-    driveImage(
-      "1Liftr1eguvmd-fFwuvU0b7_0QGSJSlDb"
-    ),
-
-    driveImage(
-      "1hzHW_Vv4q5wy0ipO9RrSYvX7gHSUuOiw"
-    ),
-
-    driveImage(
-      "1drMzYEEMdJXwXDGpF42qgv1ECmBxbpIt"
-    ),
-
-    driveImage(
-      "1dodp4_WP3o-d5iWzTwk6iCOBZpZ6X321"
-    ),
-
-    driveImage(
-      "1GXrqBgT6-lw7lcUND_KJtvL372uwswhg"
-    )
-
-  ],
-
-
-  queen: [
-
-    driveImage(
-      "1CNqhvNH0RYhwFdkU8-x5KWXUKXI7ctUw"
-    ),
-
-    driveImage(
-      "168xVF0Ai4qgjamF1nwXjSo55Fn685rX1"
-    ),
-
-    driveImage(
-      "1pn4e2r0NDcy_Wl7YMQkynxHV4WtdqHFH"
-    ),
-
-    driveImage(
-      "1kUUvY29FJPlLKBpQV9ZOA3G-1pE6jwAD"
-    )
-
-  ],
-
-
-  family: [
-
-    driveImage(
-      "1d11BpRdt39YGbeA8PSIJb_MvxjmWCEOr"
-    ),
-
-    driveImage(
-      "1997JYYsnBF33YH5KqzEqDSnHTCpmuCMf"
-    ),
-
-    driveImage(
-      "1SiTcjZ-HzwM2ZYAzo3f8x7F0C_MkFZxF"
-    ),
-
-    driveImage(
-      "1SVAmIgOakpT89QJlLtjWzmbqA9jLOrUg"
-    ),
-
-    driveImage(
-      "1I3PTr9kyUSu7tRvhyIzkdS9-43q4CwLQ"
-    ),
-
-    driveImage(
-      "153EUqSfTYvzkuxjQwRJM3hmm3MFUTX8x"
-    ),
-
-    driveImage(
-      "1aiJlxrOZ_CyhnIZdUd0qQ1FEHdJnkaGM"
-    )
-
-  ]
-
-};
-
-
-/* =====================================================
-   ROOM VIDEOS
-   TEMPORARY
-===================================================== */
-
-const roomVideos = {
-
-  king:
-    "1yvfWw6_9jE9w0Tp97HUcK30aaWpf2N8H",
-
-  twin:
-    "1PjOhu2hK3KNYzpB_QbbA3dWPFHDq4sI2",
-
-  queen:
-    "1fLjOyF-oxCZ7feK_4bYt9-aNaHmtWceZ",
-
-  family:
-    "1HnSiVWojLOalVBikysEdGFPWnWf3Uqc_"
-
-};
-
-
-/* =====================================================
-   GALLERY STATE
-===================================================== */
-
-let currentRoom = "";
-let currentImage = 0;
-
-
-/* =====================================================
-   OPEN GALLERY
-===================================================== */
-
-function openGallery(room) {
-
-  const gallery =
-    roomGalleries[room];
-
-  if (
-    !gallery ||
-    gallery.length === 0
-  ) {
-
-    return;
-
-  }
-
-
-  currentRoom =
-    room;
-
-  currentImage =
-    0;
-
-
-  updateGallery();
-
-
-  document
-    .getElementById("galleryModal")
-    .classList.add("active");
-
-
-  document.body.classList.add(
-    "modal-open"
-  );
-
-}
-
-
-/* =====================================================
-   UPDATE GALLERY
-===================================================== */
-
-function updateGallery() {
-
-  const gallery =
-    roomGalleries[currentRoom];
-
-  if (!gallery) return;
-
-
-  const image =
-    document.getElementById(
-      "galleryImage"
-    );
-
-
-  image.src =
-    gallery[currentImage];
-
-
-  image.alt =
-    currentRoom.charAt(0).toUpperCase() +
-    currentRoom.slice(1) +
-    " Room photo " +
-    (currentImage + 1);
-
-
-  document
-    .getElementById("galleryCounter")
-    .textContent =
-      (currentImage + 1) +
-      " / " +
-      gallery.length;
-
-}
-
-
-/* =====================================================
-   CLOSE GALLERY
-===================================================== */
-
-function closeGallery() {
-
-  document
-    .getElementById("galleryModal")
-    .classList.remove("active");
-
-
-  document.body.classList.remove(
-    "modal-open"
-  );
-
-}
-
-
-/* =====================================================
-   NEXT IMAGE
-===================================================== */
-
-function nextImage() {
-
-  const gallery =
-    roomGalleries[currentRoom];
-
-  if (!gallery) return;
-
-
-  currentImage =
-    (
-      currentImage + 1
-    ) %
-    gallery.length;
-
-
-  updateGallery();
-
-}
-
-
-/* =====================================================
-   PREVIOUS IMAGE
-===================================================== */
-
-function previousImage() {
-
-  const gallery =
-    roomGalleries[currentRoom];
-
-  if (!gallery) return;
-
-
-  currentImage =
-    (
-      currentImage -
-      1 +
-      gallery.length
-    ) %
-    gallery.length;
-
-
-  updateGallery();
-
-}
-
-
-/* =====================================================
-   OPEN VIDEO
-===================================================== */
-
-function openVideo(room) {
-
-  const videoId =
-    roomVideos[room];
-
-  if (!videoId) {
-
-    alert(
-      "Room video will be available soon."
-    );
-
-    return;
-
-  }
-
-
-  const frame =
-    document.getElementById(
-      "roomVideoFrame"
-    );
-
-
-  frame.src =
-    "https://drive.google.com/file/" +
-    videoId +
-    "/preview";
-
-
-  document
-    .getElementById("videoModal")
-    .classList.add("active");
-
-
-  document.body.classList.add(
-    "modal-open"
-  );
-
-}
-
-
-/* =====================================================
-   CLOSE VIDEO
-===================================================== */
-
-function closeVideo() {
-
-  const frame =
-    document.getElementById(
-      "roomVideoFrame"
-    );
-
-
-  frame.src = "";
-
-
-  document
-    .getElementById("videoModal")
-    .classList.remove("active");
-
-
-  document.body.classList.remove(
-    "modal-open"
-  );
-
-}
-
-
-/* =====================================================
-   CLICK OUTSIDE GALLERY
-===================================================== */
-
-document
-  .getElementById("galleryModal")
-  .addEventListener(
-    "click",
-    function(event) {
-
-      if (
-        event.target === this
-      ) {
-
-        closeGallery();
+        navbar.classList.remove("scrolled");
 
       }
 
     }
-  );
 
 
-/* =====================================================
-   CLICK OUTSIDE VIDEO
-===================================================== */
+    window.addEventListener(
+      "scroll",
+      updateNavbar,
+      {
+        passive: true
+      }
+    );
 
-document
-  .getElementById("videoModal")
-  .addEventListener(
-    "click",
-    function(event) {
+
+    updateNavbar();
+
+
+    /* =====================================================
+       ROOM GALLERIES
+       LOCAL GITHUB FILES
+    ====================================================== */
+
+    const roomGalleries = {
+
+      king: [
+
+        "../images/rooms/king/main.jpg",
+
+        "../images/rooms/king/01.jpg",
+
+        "../images/rooms/king/02.jpg",
+
+        "../images/rooms/king/03.jpg",
+
+        "../images/rooms/king/04.jpg",
+
+        "../images/rooms/king/05.jpg"
+
+      ],
+
+
+      twin: [
+
+        "../images/rooms/twin/main.jpg",
+
+        "../images/rooms/twin/01.jpg",
+
+        "../images/rooms/twin/02.jpg",
+
+        "../images/rooms/twin/03.jpg",
+
+        "../images/rooms/twin/04.jpg",
+
+        "../images/rooms/twin/05.jpg"
+
+      ],
+
+
+      queen: [
+
+        "../images/rooms/queen/main.jpg",
+
+        "../images/rooms/queen/01.jpg",
+
+        "../images/rooms/queen/02.jpg",
+
+        "../images/rooms/queen/03.jpg"
+
+      ],
+
+
+      family: [
+
+        "../images/rooms/family/main.jpg",
+
+        "../images/rooms/family/01.jpg",
+
+        "../images/rooms/family/02.jpg",
+
+        "../images/rooms/family/03.jpg",
+
+        "../images/rooms/family/04.jpg",
+
+        "../images/rooms/family/05.jpg",
+
+        "../images/rooms/family/06.jpg"
+
+      ]
+
+    };
+
+
+    /* =====================================================
+       ROOM VIDEOS
+       LOCAL GITHUB FILES
+    ====================================================== */
+
+    const roomVideos = {
+
+      king:
+        "../videos/king.mp4",
+
+      twin:
+        "../videos/twin.mp4",
+
+      queen:
+        "../videos/queen.mp4",
+
+      family:
+        "../videos/family.mp4"
+
+    };
+
+
+    /* =====================================================
+       GALLERY STATE
+    ====================================================== */
+
+    let currentRoom = "";
+
+    let currentImage = 0;
+
+
+    /* =====================================================
+       OPEN GALLERY
+    ====================================================== */
+
+    function openGallery(room) {
+
+      const gallery =
+        roomGalleries[room];
 
       if (
-        event.target === this
+        !gallery ||
+        gallery.length === 0
       ) {
 
-        closeVideo();
+        return;
 
       }
 
-    }
-  );
+
+      currentRoom =
+        room;
+
+      currentImage =
+        0;
 
 
-/* =====================================================
-   KEYBOARD CONTROLS
-===================================================== */
-
-document.addEventListener(
-  "keydown",
-  function(event) {
+      updateGallery();
 
 
-    if (
-      event.key === "Escape"
-    ) {
-
-      closeGallery();
-
-      closeVideo();
-
-      return;
-
-    }
-
-
-    if (
       document
         .getElementById("galleryModal")
-        .classList
-        .contains("active")
-    ) {
+        .classList.add("active");
 
 
-      if (
-        event.key === "ArrowRight"
-      ) {
-
-        nextImage();
-
-      }
-
-
-      if (
-        event.key === "ArrowLeft"
-      ) {
-
-        previousImage();
-
-      }
-
-    }
-
-  }
-);
-
-
-/* =====================================================
-   MOBILE SWIPE
-===================================================== */
-
-let touchStartX = 0;
-let touchEndX = 0;
-
-
-const galleryImage =
-  document.getElementById(
-    "galleryImage"
-  );
-
-
-galleryImage.addEventListener(
-  "touchstart",
-  function(event) {
-
-    touchStartX =
-      event.changedTouches[0]
-        .screenX;
-
-  },
-  {
-    passive: true
-  }
-);
-
-
-galleryImage.addEventListener(
-  "touchend",
-  function(event) {
-
-    touchEndX =
-      event.changedTouches[0]
-        .screenX;
-
-    const difference =
-      touchEndX -
-      touchStartX;
-
-
-    if (
-      Math.abs(difference) < 50
-    ) {
-
-      return;
-
-    }
-
-
-    if (
-      difference < 0
-    ) {
-
-      nextImage();
-
-    } else {
-
-      previousImage();
-
-    }
-
-  },
-  {
-    passive: true
-  }
-);
-
-
-/* =====================================================
-   PREVENT BACKGROUND TOUCH SCROLL
-   WHEN MODAL IS OPEN
-===================================================== */
-
-document.addEventListener(
-  "touchmove",
-  function(event) {
-
-    if (
-      document.body.classList
-        .contains("modal-open")
-    ) {
-
-      if (
-        !event.target.closest(
-          "#galleryImage"
-        )
-      ) {
-
-        event.preventDefault();
-
-      }
-
-    }
-
-  },
-  {
-    passive: false
-  }
-);
-
-
-/* =====================================================
-   PAGE LOAD
-===================================================== */
-
-window.addEventListener(
-  "load",
-  function() {
-
-    document.body.classList.add(
-      "page-loaded"
-    );
-
-  }
-);
-
-
-/* =====================================================
-   INTERNAL PAGE TRANSITION
-===================================================== */
-
-const pageProgress =
-  document.getElementById(
-    "pageProgress"
-  );
-
-
-document.addEventListener(
-  "click",
-  function(event) {
-
-    const link =
-      event.target.closest("a");
-
-    if (!link) return;
-
-
-    const href =
-      link.getAttribute("href");
-
-    if (!href) return;
-
-
-    if (
-      href.startsWith("#") ||
-      href.startsWith("mailto:") ||
-      href.startsWith("tel:") ||
-      link.target === "_blank" ||
-      link.hasAttribute("download")
-    ) {
-
-      return;
-
-    }
-
-
-    let url;
-
-    try {
-
-      url =
-        new URL(
-          href,
-          window.location.href
-        );
-
-    } catch {
-
-      return;
-
-    }
-
-
-    /*
-     * Only same-site links.
-     */
-
-    if (
-      url.origin !==
-      window.location.origin
-    ) {
-
-      return;
-
-    }
-
-
-    if (
-      url.pathname ===
-        window.location.pathname &&
-      url.search ===
-        window.location.search
-    ) {
-
-      return;
-
-    }
-
-
-    event.preventDefault();
-
-
-    if (pageProgress) {
-
-      pageProgress.classList.add(
-        "active"
+      document.body.classList.add(
+        "modal-open"
       );
 
     }
 
 
-    document.body.style.opacity =
-      "0.25";
+    /* =====================================================
+       UPDATE GALLERY
+    ====================================================== */
+
+    function updateGallery() {
+
+      const gallery =
+        roomGalleries[currentRoom];
+
+      if (!gallery) return;
 
 
-    setTimeout(
-      function() {
+      const image =
+        document.getElementById(
+          "galleryImage"
+        );
 
-        window.location.href =
-          url.href;
 
-      },
-      140
+      image.src =
+        gallery[currentImage];
+
+
+      image.alt =
+        currentRoom.charAt(0).toUpperCase() +
+        currentRoom.slice(1) +
+        " Room photo " +
+        (currentImage + 1);
+
+
+      document
+        .getElementById("galleryCounter")
+        .textContent =
+          (currentImage + 1) +
+          " / " +
+          gallery.length;
+
+    }
+
+
+    /* =====================================================
+       CLOSE GALLERY
+    ====================================================== */
+
+    function closeGallery() {
+
+      document
+        .getElementById("galleryModal")
+        .classList.remove("active");
+
+
+      document.body.classList.remove(
+        "modal-open"
+      );
+
+    }
+
+
+    /* =====================================================
+       NEXT IMAGE
+    ====================================================== */
+
+    function nextImage() {
+
+      const gallery =
+        roomGalleries[currentRoom];
+
+      if (!gallery) return;
+
+
+      currentImage =
+        (
+          currentImage + 1
+        ) %
+        gallery.length;
+
+
+      updateGallery();
+
+    }
+
+
+    /* =====================================================
+       PREVIOUS IMAGE
+    ====================================================== */
+
+    function previousImage() {
+
+      const gallery =
+        roomGalleries[currentRoom];
+
+      if (!gallery) return;
+
+
+      currentImage =
+        (
+          currentImage -
+          1 +
+          gallery.length
+        ) %
+        gallery.length;
+
+
+      updateGallery();
+
+    }
+
+
+    /* =====================================================
+       OPEN VIDEO
+    ====================================================== */
+
+    function openVideo(room) {
+
+      const videoUrl =
+        roomVideos[room];
+
+      if (!videoUrl) {
+
+        alert(
+          "Room video will be available soon."
+        );
+
+        return;
+
+      }
+
+
+      const player =
+        document.getElementById(
+          "roomVideo"
+        );
+
+
+      player.src =
+        videoUrl;
+
+
+      player.load();
+
+
+      document
+        .getElementById("videoModal")
+        .classList.add("active");
+
+
+      document.body.classList.add(
+        "modal-open"
+      );
+
+
+      const playPromise =
+        player.play();
+
+
+      if (
+        playPromise !== undefined
+      ) {
+
+        playPromise.catch(
+          function() {
+            // Browser may require
+            // the user to press play.
+          }
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       CLOSE VIDEO
+    ====================================================== */
+
+    function closeVideo() {
+
+      const player =
+        document.getElementById(
+          "roomVideo"
+        );
+
+
+      player.pause();
+
+      player.removeAttribute(
+        "src"
+      );
+
+      player.load();
+
+
+      document
+        .getElementById("videoModal")
+        .classList.remove("active");
+
+
+      document.body.classList.remove(
+        "modal-open"
+      );
+
+    }
+
+
+    /* =====================================================
+       CLICK OUTSIDE GALLERY
+    ====================================================== */
+
+    document
+      .getElementById("galleryModal")
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (
+            event.target === this
+          ) {
+
+            closeGallery();
+
+          }
+
+        }
+      );
+
+
+    /* =====================================================
+       CLICK OUTSIDE VIDEO
+    ====================================================== */
+
+    document
+      .getElementById("videoModal")
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (
+            event.target === this
+          ) {
+
+            closeVideo();
+
+          }
+
+        }
+      );
+
+
+    /* =====================================================
+       KEYBOARD CONTROLS
+    ====================================================== */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeGallery();
+
+          closeVideo();
+
+          return;
+
+        }
+
+
+        if (
+          document
+            .getElementById("galleryModal")
+            .classList
+            .contains("active")
+        ) {
+
+          if (
+            event.key === "ArrowRight"
+          ) {
+
+            nextImage();
+
+          }
+
+
+          if (
+            event.key === "ArrowLeft"
+          ) {
+
+            previousImage();
+
+          }
+
+        }
+
+      }
     );
 
-  }
-);
 
-</script>
+    /* =====================================================
+       MOBILE SWIPE
+    ====================================================== */
+
+    let touchStartX = 0;
+
+    let touchEndX = 0;
+
+
+    const galleryImage =
+      document.getElementById(
+        "galleryImage"
+      );
+
+
+    galleryImage.addEventListener(
+      "touchstart",
+      function(event) {
+
+        touchStartX =
+          event.changedTouches[0]
+            .screenX;
+
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    galleryImage.addEventListener(
+      "touchend",
+      function(event) {
+
+        touchEndX =
+          event.changedTouches[0]
+            .screenX;
+
+
+        const difference =
+          touchEndX -
+          touchStartX;
+
+
+        if (
+          Math.abs(difference) < 50
+        ) {
+
+          return;
+
+        }
+
+
+        if (
+          difference < 0
+        ) {
+
+          nextImage();
+
+        } else {
+
+          previousImage();
+
+        }
+
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    /* =====================================================
+       PREVENT BACKGROUND TOUCH SCROLL
+       WHEN MODAL IS OPEN
+    ====================================================== */
+
+    document.addEventListener(
+      "touchmove",
+      function(event) {
+
+        if (
+          document.body.classList
+            .contains("modal-open")
+        ) {
+
+          if (
+            !event.target.closest(
+              "#galleryImage"
+            )
+          ) {
+
+            event.preventDefault();
+
+          }
+
+        }
+
+      },
+      {
+        passive: false
+      }
+    );
+
+
+    /* =====================================================
+       PAGE LOAD
+    ====================================================== */
+
+    window.addEventListener(
+      "load",
+      function() {
+
+        document.body.classList.add(
+          "page-loaded"
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       INTERNAL PAGE TRANSITION
+    ====================================================== */
+
+    const pageProgress =
+      document.getElementById(
+        "pageProgress"
+      );
+
+
+    document.addEventListener(
+      "click",
+      function(event) {
+
+        const link =
+          event.target.closest("a");
+
+        if (!link) return;
+
+
+        const href =
+          link.getAttribute("href");
+
+        if (!href) return;
+
+
+        if (
+          href.startsWith("#") ||
+          href.startsWith("mailto:") ||
+          href.startsWith("tel:") ||
+          link.target === "_blank" ||
+          link.hasAttribute("download")
+        ) {
+
+          return;
+
+        }
+
+
+        let url;
+
+
+        try {
+
+          url =
+            new URL(
+              href,
+              window.location.href
+            );
+
+        } catch {
+
+          return;
+
+        }
+
+
+        /*
+         * Only same-site links.
+         */
+
+        if (
+          url.origin !==
+          window.location.origin
+        ) {
+
+          return;
+
+        }
+
+
+        if (
+          url.pathname ===
+            window.location.pathname &&
+          url.search ===
+            window.location.search
+        ) {
+
+          return;
+
+        }
+
+
+        event.preventDefault();
+
+
+        if (pageProgress) {
+
+          pageProgress.classList.add(
+            "active"
+          );
+
+        }
+
+
+        document.body.style.opacity =
+          "0.25";
+
+
+        setTimeout(
+          function() {
+
+            window.location.href =
+              url.href;
+
+          },
+          140
+        );
+
+      }
+    );
+
+  </script>
 
 
 </body>
 
 </html>
+```
