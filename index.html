@@ -67,7 +67,7 @@
 
 
   <!-- =====================================================
-       APPLE / IPHONE
+       APPLE
   ====================================================== -->
 
   <meta
@@ -153,11 +153,17 @@
   {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+
     "name": "D'Anjung Cottage",
+
     "url": "https://danjungcottage.com/",
+
     "logo": "https://danjungcottage.com/images/logo.png",
+
     "image": "https://danjungcottage.com/images/logo.png",
+
     "description": "A peaceful and comfortable stay in Paka, Terengganu, Malaysia.",
+
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Paka",
@@ -187,7 +193,7 @@
 
 
   <!-- =====================================================
-       STYLE
+       PAGE STYLE
   ====================================================== -->
 
   <style>
@@ -243,34 +249,16 @@
 
     html {
 
-      width:
-        100%;
-
-      min-height:
-        100%;
+      scroll-behavior:
+        smooth;
 
       background:
         var(--cream);
-
-      scroll-behavior:
-        smooth;
 
     }
 
 
     body {
-
-      width:
-        100%;
-
-      min-height:
-        100%;
-
-      margin:
-        0;
-
-      padding:
-        0;
 
       font-family:
         "DM Sans",
@@ -340,14 +328,18 @@
 
     img {
 
-      display:
-        block;
-
       max-width:
         100%;
 
+      height:
+        auto;
+
     }
 
+
+    /* =====================================================
+       SELECTION
+    ====================================================== */
 
     ::selection {
 
@@ -379,7 +371,7 @@
         0;
 
       z-index:
-        9999;
+        1000;
 
       display:
         flex;
@@ -390,13 +382,21 @@
       justify-content:
         space-between;
 
-      width:
-        100%;
+      /*
+       * Safe area for iPhone status bar
+       * and Dynamic Island.
+       */
+      padding-top:
+        calc(env(safe-area-inset-top) + 14px);
 
-      padding:
-        calc(14px + env(safe-area-inset-top, 0px))
-        5%
-        14px;
+      padding-right:
+        5%;
+
+      padding-bottom:
+        17px;
+
+      padding-left:
+        5%;
 
       color:
         white;
@@ -404,40 +404,39 @@
       background:
         transparent;
 
-      pointer-events:
-        auto;
-
       transition:
         background .4s var(--ease),
         padding .4s var(--ease),
         box-shadow .4s var(--ease),
         color .4s var(--ease);
 
-    }
-
-
-    .navbar,
-    .navbar * {
-
+      /*
+       * Makes sure the navbar itself receives
+       * touch events above the video.
+       */
       pointer-events:
         auto;
 
     }
 
 
+    /* =====================================================
+       SCROLLED NAVBAR
+    ====================================================== */
+
     .navbar.scrolled {
 
       padding-top:
-        calc(11px + env(safe-area-inset-top, 0px));
+        calc(env(safe-area-inset-top) + 11px);
 
       padding-bottom:
-        11px;
+        14px;
 
       color:
         var(--dark);
 
       background:
-        rgba(255,255,255,.96);
+        rgba(255,255,255,.94);
 
       box-shadow:
         0 8px 35px rgba(0,0,0,.08);
@@ -474,6 +473,9 @@
 
       white-space:
         nowrap;
+
+      cursor:
+        pointer;
 
     }
 
@@ -610,6 +612,9 @@
         box-shadow .25s ease,
         background .25s ease;
 
+      cursor:
+        pointer;
+
     }
 
 
@@ -644,14 +649,14 @@
       position:
         relative;
 
-      width:
-        100%;
+      /*
+       * Modern mobile viewport.
+       */
+      min-height:
+        100svh;
 
       height:
-        100dvh;
-
-      min-height:
-        100dvh;
+        760px;
 
       display:
         flex;
@@ -673,6 +678,23 @@
 
       isolation:
         isolate;
+
+    }
+
+
+    /*
+     * Use dynamic viewport when available.
+     * This helps iPhone Safari resize correctly
+     * when browser controls appear/disappear.
+     */
+    @supports (height: 100dvh) {
+
+      .hero {
+
+        min-height:
+          100dvh;
+
+      }
 
     }
 
@@ -701,9 +723,6 @@
       z-index:
         -3;
 
-      pointer-events:
-        none;
-
       background:
         #17211d
         url(
@@ -714,6 +733,9 @@
 
       transform:
         scale(1.22);
+
+      pointer-events:
+        none;
 
     }
 
@@ -733,9 +755,6 @@
       z-index:
         -2;
 
-      pointer-events:
-        none;
-
       background:
 
         linear-gradient(
@@ -744,6 +763,9 @@
           rgba(10,17,14,.18) 42%,
           rgba(10,17,14,.76) 100%
         );
+
+      pointer-events:
+        none;
 
     }
 
@@ -781,12 +803,6 @@
     ====================================================== */
 
     .hero-content {
-
-      position:
-        relative;
-
-      z-index:
-        2;
 
       width:
         min(900px, 90%);
@@ -1726,10 +1742,17 @@
 
       .navbar {
 
-        padding:
-          calc(14px + env(safe-area-inset-top, 0px))
-          5%
-          14px;
+        padding-top:
+          calc(env(safe-area-inset-top) + 14px);
+
+        padding-right:
+          5%;
+
+        padding-bottom:
+          17px;
+
+        padding-left:
+          5%;
 
       }
 
@@ -1754,10 +1777,10 @@
       .hero {
 
         height:
-          100dvh;
+          700px;
 
         min-height:
-          100dvh;
+          100svh;
 
       }
 
@@ -1818,23 +1841,24 @@
 
       /*
        * IMPORTANT:
-       * Safe-area padding protects the Dynamic Island.
-       * The hero itself still fills the complete viewport.
+       *
+       * The extra 10px moves the navigation
+       * comfortably below the Dynamic Island.
+       *
+       * The hero itself is NOT pushed down.
+       * Therefore the video still fills the screen.
        */
 
       .navbar {
 
-        top:
-          0;
-
         padding-top:
-          calc(11px + env(safe-area-inset-top, 0px));
+          calc(env(safe-area-inset-top) + 10px);
 
         padding-right:
           5%;
 
         padding-bottom:
-          11px;
+          15px;
 
         padding-left:
           5%;
@@ -1845,10 +1869,10 @@
       .navbar.scrolled {
 
         padding-top:
-          calc(10px + env(safe-area-inset-top, 0px));
+          calc(env(safe-area-inset-top) + 9px);
 
         padding-bottom:
-          10px;
+          13px;
 
       }
 
@@ -1872,49 +1896,25 @@
       }
 
 
-      /*
-       * 100dvh = dynamic viewport height.
-       * This is the important iPhone fix.
-       */
-
       .hero {
 
-        width:
-          100%;
-
-        height:
-          100dvh;
-
         min-height:
-          100dvh;
-
-      }
-
-
-      .hero-video {
-
-        width:
-          100%;
+          100svh;
 
         height:
-          100%;
-
-        object-fit:
-          cover;
-
-        pointer-events:
-          none;
+          680px;
 
       }
 
 
-      .hero-content {
+      @supports (height: 100dvh) {
 
-        width:
-          90%;
+        .hero {
 
-        padding:
-          0;
+          min-height:
+            100dvh;
+
+        }
 
       }
 
@@ -2066,42 +2066,40 @@
 
 
     /* =====================================================
-       SMALL IPHONE
+       VERY SMALL PHONES
     ====================================================== */
 
     @media (max-width: 390px) {
 
-      .logo {
+      .navbar {
 
-        font-size:
-          .9rem;
-
-      }
-
-
-      .nav-book {
-
-        padding:
-          8px 11px;
-
-        font-size:
-          .68rem;
+        padding-top:
+          calc(env(safe-area-inset-top) + 12px);
 
       }
 
-
-      .hero h1 {
-
-        font-size:
-          2.85rem;
-
-      }
+    }
 
 
-      .hero p {
+    /* =====================================================
+       IPHONE SAFE AREA
+    ====================================================== */
 
-        font-size:
-          .84rem;
+    @supports (padding: max(0px)) {
+
+      .navbar {
+
+        padding-left:
+          max(
+            5%,
+            env(safe-area-inset-left)
+          );
+
+        padding-right:
+          max(
+            5%,
+            env(safe-area-inset-right)
+          );
 
       }
 
@@ -2187,18 +2185,27 @@
   <nav class="nav-links">
 
 
-    <a href="/">
+    <a
+      href="/">
+
       About
+
     </a>
 
 
-    <a href="/Rooms/">
+    <a
+      href="/Rooms/">
+
       Rooms
+
     </a>
 
 
-    <a href="/Contact/">
+    <a
+      href="/Contact/">
+
       Contact
+
     </a>
 
 
@@ -2665,18 +2672,27 @@
     <div class="footer-links">
 
 
-      <a href="/Policies/">
+      <a
+        href="/Policies/">
+
         Privacy Policy
+
       </a>
 
 
-      <a href="/Policies/">
+      <a
+        href="/Policies/">
+
         Terms & Conditions
+
       </a>
 
 
-      <a href="/Contact/">
+      <a
+        href="/Contact/">
+
         Contact Us
+
       </a>
 
 
@@ -2714,7 +2730,6 @@
   /*
    * Safety fallback.
    */
-
   setTimeout(
     function () {
 
@@ -2805,7 +2820,6 @@
     in window
   ) {
 
-
     const revealObserver =
       new IntersectionObserver(
         function (
@@ -2813,20 +2827,16 @@
           observer
         ) {
 
-
           entries.forEach(
             function (entry) {
-
 
               if (
                 entry.isIntersecting
               ) {
 
-
                 entry.target.classList.add(
                   "visible"
                 );
-
 
                 observer.unobserve(
                   entry.target
@@ -2836,7 +2846,6 @@
 
             }
           );
-
 
         },
         {
@@ -2861,9 +2870,7 @@
       }
     );
 
-
   } else {
-
 
     revealElements.forEach(
       function (element) {
@@ -2891,12 +2898,10 @@
 
   if (heroVideo) {
 
-
     if (
       "IntersectionObserver"
       in window
     ) {
-
 
       const videoObserver =
         new IntersectionObserver(
@@ -2904,10 +2909,8 @@
             entries
           ) {
 
-
             entries.forEach(
               function (entry) {
-
 
                 if (
                   entry.isIntersecting
@@ -2928,7 +2931,6 @@
               }
             );
 
-
           },
           {
             threshold:
@@ -2946,16 +2948,12 @@
 
     /*
      * Try autoplay immediately.
+     * If iPhone blocks it, the poster remains.
      */
-
     heroVideo
       .play()
       .catch(
-        function () {
-
-          heroVideo.pause();
-
-        }
+        function () {}
       );
 
   }
@@ -2963,36 +2961,46 @@
 
 
   /* =====================================================
-     PREVENT DOUBLE-TAP / NAVIGATION FEELING SLOW
+     NAVIGATION TOUCH SAFETY
   ====================================================== */
+
+  /*
+   * Prevent accidental page movement when tapping
+   * navigation elements near the top of iPhone.
+   *
+   * This does NOT disable normal scrolling.
+   */
 
   document
     .querySelectorAll(
-      "a"
+      ".navbar a"
     )
     .forEach(
       function (link) {
 
         link.addEventListener(
-          "click",
+          "touchstart",
           function () {
 
-            /*
-             * Do not fade external booking links.
-             * This keeps the booking button responsive.
-             */
+            link.style.opacity =
+              ".88";
 
-            if (
-              link.hostname ===
-              window.location.hostname
-            ) {
+          },
+          {
+            passive: true
+          }
+        );
 
-              document.body.classList.add(
-                "is-navigating"
-              );
+        link.addEventListener(
+          "touchend",
+          function () {
 
-            }
+            link.style.opacity =
+              "";
 
+          },
+          {
+            passive: true
           }
         );
 
