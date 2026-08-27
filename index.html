@@ -46,7 +46,7 @@
 
 
   <!-- =====================================================
-       FAVICON / LOGO
+       FAVICON
   ====================================================== -->
 
   <link
@@ -67,7 +67,7 @@
 
 
   <!-- =====================================================
-       APPLE
+       APPLE / IPHONE
   ====================================================== -->
 
   <meta
@@ -76,6 +76,10 @@
 
   <meta
     name="apple-mobile-web-app-capable"
+    content="yes">
+
+  <meta
+    name="mobile-web-app-capable"
     content="yes">
 
   <meta
@@ -249,6 +253,12 @@
 
     html {
 
+      width:
+        100%;
+
+      min-height:
+        100%;
+
       scroll-behavior:
         smooth;
 
@@ -259,6 +269,12 @@
 
 
     body {
+
+      width:
+        100%;
+
+      min-height:
+        100%;
 
       font-family:
         "DM Sans",
@@ -331,6 +347,9 @@
       max-width:
         100%;
 
+      display:
+        block;
+
     }
 
 
@@ -380,14 +399,25 @@
         space-between;
 
       /*
-       * Safe-area support for iPhone notch /
-       * Dynamic Island.
+       * IMPORTANT:
+       *
+       * Background extends behind the iPhone
+       * Dynamic Island / status bar.
+       *
+       * Actual content receives safe-area padding.
        */
 
-      padding:
-        calc(24px + env(safe-area-inset-top))
-        5%
-        24px;
+      padding-top:
+        calc(17px + env(safe-area-inset-top, 0px));
+
+      padding-right:
+        5%;
+
+      padding-bottom:
+        17px;
+
+      padding-left:
+        5%;
 
       color:
         white;
@@ -407,16 +437,10 @@
     .navbar.scrolled {
 
       padding-top:
-        calc(14px + env(safe-area-inset-top));
-
-      padding-right:
-        5%;
+        calc(14px + env(safe-area-inset-top, 0px));
 
       padding-bottom:
         14px;
-
-      padding-left:
-        5%;
 
       color:
         var(--dark);
@@ -426,6 +450,12 @@
 
       box-shadow:
         0 8px 35px rgba(0,0,0,.08);
+
+      backdrop-filter:
+        blur(14px);
+
+      -webkit-backdrop-filter:
+        blur(14px);
 
     }
 
@@ -623,11 +653,17 @@
       position:
         relative;
 
+      /*
+       * Use the dynamic viewport on modern iPhones.
+       * This prevents the hero from leaving a blank strip
+       * when Safari's browser UI changes size.
+       */
+
       min-height:
-        100svh;
+        100dvh;
 
       height:
-        760px;
+        100dvh;
 
       display:
         flex;
@@ -653,6 +689,23 @@
     }
 
 
+    /* Fallback */
+
+    @supports not (height: 100dvh) {
+
+      .hero {
+
+        min-height:
+          100svh;
+
+        height:
+          100svh;
+
+      }
+
+    }
+
+
     /* =====================================================
        HERO VIDEO
     ====================================================== */
@@ -674,9 +727,6 @@
       object-fit:
         cover;
 
-      object-position:
-        center center;
-
       z-index:
         -3;
 
@@ -689,7 +739,7 @@
         no-repeat;
 
       transform:
-        scale(1.025);
+        scale(1.22);
 
     }
 
@@ -969,7 +1019,7 @@
         absolute;
 
       bottom:
-        28px;
+        calc(28px + env(safe-area-inset-bottom, 0px));
 
       left:
         50%;
@@ -1598,6 +1648,9 @@
       padding:
         48px 6%;
 
+      padding-bottom:
+        calc(48px + env(safe-area-inset-bottom, 0px));
+
     }
 
 
@@ -1693,10 +1746,17 @@
 
       .navbar {
 
-        padding:
-          calc(19px + env(safe-area-inset-top))
-          5%
+        padding-top:
+          calc(19px + env(safe-area-inset-top, 0px));
+
+        padding-right:
+          5%;
+
+        padding-bottom:
           19px;
+
+        padding-left:
+          5%;
 
       }
 
@@ -1704,16 +1764,10 @@
       .navbar.scrolled {
 
         padding-top:
-          calc(14px + env(safe-area-inset-top));
-
-        padding-right:
-          5%;
+          calc(14px + env(safe-area-inset-top, 0px));
 
         padding-bottom:
           14px;
-
-        padding-left:
-          5%;
 
       }
 
@@ -1737,11 +1791,11 @@
 
       .hero {
 
-        height:
-          700px;
-
         min-height:
-          100svh;
+          100dvh;
+
+        height:
+          100dvh;
 
       }
 
@@ -1800,38 +1854,25 @@
 
     @media (max-width: 600px) {
 
-      /* ---------------------------------------------------
-         iPhone / MOBILE NAVBAR
-      --------------------------------------------------- */
+      /*
+       * IMPORTANT FIX:
+       *
+       * Do NOT use 17% here.
+       *
+       * The previous 17% created a large empty
+       * space on iPhone screens.
+       */
 
       .navbar {
 
-        /*
-         * IMPORTANT:
-         * Use 17px, NOT 17%.
-         *
-         * env(safe-area-inset-top) keeps the
-         * navbar below the iPhone status area.
-         */
-
-        padding:
-          calc(17px + env(safe-area-inset-top))
-          5%
-          17px;
-
-      }
-
-
-      .navbar.scrolled {
-
         padding-top:
-          calc(14px + env(safe-area-inset-top));
+          calc(15px + env(safe-area-inset-top, 0px));
 
         padding-right:
           5%;
 
         padding-bottom:
-          14px;
+          15px;
 
         padding-left:
           5%;
@@ -1839,9 +1880,16 @@
       }
 
 
-      /* ---------------------------------------------------
-         LOGO
-      --------------------------------------------------- */
+      .navbar.scrolled {
+
+        padding-top:
+          calc(12px + env(safe-area-inset-top, 0px));
+
+        padding-bottom:
+          12px;
+
+      }
+
 
       .logo {
 
@@ -1850,10 +1898,6 @@
 
       }
 
-
-      /* ---------------------------------------------------
-         BOOK BUTTON
-      --------------------------------------------------- */
 
       .nav-book {
 
@@ -1866,29 +1910,28 @@
       }
 
 
-      /* ---------------------------------------------------
-         HERO
-      --------------------------------------------------- */
+      /* ===================================================
+         IPHONE FULL SCREEN HERO
+      =================================================== */
 
       .hero {
 
-        /*
-         * Use the full small viewport height.
-         * This helps prevent gaps on iPhone.
-         */
-
         min-height:
-          100svh;
+          100dvh;
 
         height:
-          100svh;
+          100dvh;
+
+        /*
+         * The hero background/video is allowed
+         * to extend behind the Dynamic Island.
+         */
+
+        margin:
+          0;
 
       }
 
-
-      /* ---------------------------------------------------
-         MOBILE VIDEO
-      --------------------------------------------------- */
 
       .hero-video {
 
@@ -1901,12 +1944,9 @@
         object-fit:
           cover;
 
-        object-position:
-          center center;
-
         /*
-         * Extra zoom removes unwanted video
-         * edges / black bars on tall phones.
+         * Slightly larger crop prevents visible
+         * edges when iPhone Safari changes viewport.
          */
 
         transform:
@@ -1915,25 +1955,18 @@
       }
 
 
-      /* ---------------------------------------------------
-         HERO CONTENT
-      --------------------------------------------------- */
-
       .hero-content {
 
         width:
           90%;
 
         /*
-         * Keeps content visually centered
-         * without pushing it into the iPhone
-         * safe areas.
+         * Keep the content away from the
+         * bottom home indicator area.
          */
 
-        padding:
-          env(safe-area-inset-top)
-          0
-          env(safe-area-inset-bottom);
+        padding-bottom:
+          env(safe-area-inset-bottom, 0px);
 
       }
 
@@ -1979,10 +2012,6 @@
       }
 
 
-      /* ---------------------------------------------------
-         SECTIONS
-      --------------------------------------------------- */
-
       .section {
 
         padding:
@@ -1999,10 +2028,6 @@
       }
 
 
-      /* ---------------------------------------------------
-         INTRO IMAGE
-      --------------------------------------------------- */
-
       .intro-image {
 
         min-height:
@@ -2013,10 +2038,6 @@
 
       }
 
-
-      /* ---------------------------------------------------
-         ROOMS HEADER
-      --------------------------------------------------- */
 
       .rooms-header {
 
@@ -2036,10 +2057,6 @@
 
       }
 
-
-      /* ---------------------------------------------------
-         ROOMS
-      --------------------------------------------------- */
 
       .rooms-grid {
 
@@ -2068,10 +2085,6 @@
       }
 
 
-      /* ---------------------------------------------------
-         CTA
-      --------------------------------------------------- */
-
       .cta {
 
         padding:
@@ -2079,10 +2092,6 @@
 
       }
 
-
-      /* ---------------------------------------------------
-         FOOTER
-      --------------------------------------------------- */
 
       .footer-inner {
 
@@ -2731,9 +2740,6 @@
 
   /*
    * Safety fallback.
-   *
-   * Never leave the page invisible
-   * if something takes too long.
    */
 
   setTimeout(
@@ -2902,7 +2908,7 @@
 
 
   /* =====================================================
-     HERO VIDEO OPTIMISATION
+     HERO VIDEO
   ====================================================== */
 
   const heroVideo =
@@ -2965,15 +2971,10 @@
 
     }
 
-  }
 
-
-
-  /* =====================================================
-     MOBILE VIDEO FALLBACK
-  ====================================================== */
-
-  if (heroVideo) {
+    /*
+     * Mobile autoplay attempt.
+     */
 
     heroVideo.play()
       .catch(
