@@ -47,8 +47,6 @@
 
   <!-- =====================================================
        FAVICON / LOGO
-       Existing GitHub file:
-       /images/logo.png
   ====================================================== -->
 
   <link
@@ -237,17 +235,22 @@
     *::before,
     *::after {
 
-      box-sizing: border-box;
+      box-sizing:
+        border-box;
 
-      margin: 0;
-      padding: 0;
+      margin:
+        0;
+
+      padding:
+        0;
 
     }
 
 
     html {
 
-      scroll-behavior: smooth;
+      scroll-behavior:
+        smooth;
 
       background:
         var(--cream);
@@ -355,24 +358,42 @@
       position:
         fixed;
 
-      top:0;
-      left:0;
-      right:0;
+      top:
+        0;
 
-      z-index:1000;
+      left:
+        0;
 
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
+      right:
+        0;
+
+      z-index:
+        1000;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      /*
+       * Safe-area support for iPhone notch /
+       * Dynamic Island.
+       */
 
       padding:
-        calc(17px + env(safe-area-inset-top))
+        calc(24px + env(safe-area-inset-top))
         5%
-        17px;
-      
-      color:white;
+        24px;
 
-      background:transparent;
+      color:
+        white;
+
+      background:
+        transparent;
 
       transition:
         background .4s var(--ease),
@@ -388,8 +409,14 @@
       padding-top:
         calc(14px + env(safe-area-inset-top));
 
+      padding-right:
+        5%;
+
       padding-bottom:
         14px;
+
+      padding-left:
+        5%;
 
       color:
         var(--dark);
@@ -647,6 +674,9 @@
       object-fit:
         cover;
 
+      object-position:
+        center center;
+
       z-index:
         -3;
 
@@ -659,7 +689,7 @@
         no-repeat;
 
       transform:
-        scale(1.22);
+        scale(1.025);
 
     }
 
@@ -1664,7 +1694,26 @@
       .navbar {
 
         padding:
-          19px 5%;
+          calc(19px + env(safe-area-inset-top))
+          5%
+          19px;
+
+      }
+
+
+      .navbar.scrolled {
+
+        padding-top:
+          calc(14px + env(safe-area-inset-top));
+
+        padding-right:
+          5%;
+
+        padding-bottom:
+          14px;
+
+        padding-left:
+          5%;
 
       }
 
@@ -1751,15 +1800,48 @@
 
     @media (max-width: 600px) {
 
+      /* ---------------------------------------------------
+         iPhone / MOBILE NAVBAR
+      --------------------------------------------------- */
+
       .navbar {
+
+        /*
+         * IMPORTANT:
+         * Use 17px, NOT 17%.
+         *
+         * env(safe-area-inset-top) keeps the
+         * navbar below the iPhone status area.
+         */
 
         padding:
           calc(17px + env(safe-area-inset-top))
           5%
-          17%;
+          17px;
 
       }
 
+
+      .navbar.scrolled {
+
+        padding-top:
+          calc(14px + env(safe-area-inset-top));
+
+        padding-right:
+          5%;
+
+        padding-bottom:
+          14px;
+
+        padding-left:
+          5%;
+
+      }
+
+
+      /* ---------------------------------------------------
+         LOGO
+      --------------------------------------------------- */
 
       .logo {
 
@@ -1768,6 +1850,10 @@
 
       }
 
+
+      /* ---------------------------------------------------
+         BOOK BUTTON
+      --------------------------------------------------- */
 
       .nav-book {
 
@@ -1780,13 +1866,74 @@
       }
 
 
+      /* ---------------------------------------------------
+         HERO
+      --------------------------------------------------- */
+
       .hero {
+
+        /*
+         * Use the full small viewport height.
+         * This helps prevent gaps on iPhone.
+         */
 
         min-height:
           100svh;
 
         height:
-          680px;
+          100svh;
+
+      }
+
+
+      /* ---------------------------------------------------
+         MOBILE VIDEO
+      --------------------------------------------------- */
+
+      .hero-video {
+
+        width:
+          100%;
+
+        height:
+          100%;
+
+        object-fit:
+          cover;
+
+        object-position:
+          center center;
+
+        /*
+         * Extra zoom removes unwanted video
+         * edges / black bars on tall phones.
+         */
+
+        transform:
+          scale(1.22);
+
+      }
+
+
+      /* ---------------------------------------------------
+         HERO CONTENT
+      --------------------------------------------------- */
+
+      .hero-content {
+
+        width:
+          90%;
+
+        /*
+         * Keeps content visually centered
+         * without pushing it into the iPhone
+         * safe areas.
+         */
+
+        padding:
+          env(safe-area-inset-top)
+          0
+          env(safe-area-inset-bottom);
 
       }
 
@@ -1832,6 +1979,10 @@
       }
 
 
+      /* ---------------------------------------------------
+         SECTIONS
+      --------------------------------------------------- */
+
       .section {
 
         padding:
@@ -1848,6 +1999,10 @@
       }
 
 
+      /* ---------------------------------------------------
+         INTRO IMAGE
+      --------------------------------------------------- */
+
       .intro-image {
 
         min-height:
@@ -1858,6 +2013,10 @@
 
       }
 
+
+      /* ---------------------------------------------------
+         ROOMS HEADER
+      --------------------------------------------------- */
 
       .rooms-header {
 
@@ -1877,6 +2036,10 @@
 
       }
 
+
+      /* ---------------------------------------------------
+         ROOMS
+      --------------------------------------------------- */
 
       .rooms-grid {
 
@@ -1905,6 +2068,10 @@
       }
 
 
+      /* ---------------------------------------------------
+         CTA
+      --------------------------------------------------- */
+
       .cta {
 
         padding:
@@ -1912,6 +2079,10 @@
 
       }
 
+
+      /* ---------------------------------------------------
+         FOOTER
+      --------------------------------------------------- */
 
       .footer-inner {
 
@@ -2039,11 +2210,6 @@
 
     </a>
 
-
-    <!--
-      BOOKING REMAINS OUTSIDE GITHUB MIGRATION.
-      Keep your existing booking system.
-    -->
 
     <a
       href="https://book.danjungcottage.com/"
@@ -2593,7 +2759,8 @@
     );
 
 
-  let navbarTicking = false;
+  let navbarTicking =
+    false;
 
 
   function updateNavbar() {
@@ -2612,7 +2779,8 @@
 
     }
 
-    navbarTicking = false;
+    navbarTicking =
+      false;
 
   }
 
@@ -2627,13 +2795,15 @@
           updateNavbar
         );
 
-        navbarTicking = true;
+        navbarTicking =
+          true;
 
       }
 
     },
     {
-      passive: true
+      passive:
+        true
     }
   );
 
@@ -2802,15 +2972,6 @@
   /* =====================================================
      MOBILE VIDEO FALLBACK
   ====================================================== */
-
-  /*
-   * Some mobile browsers are aggressive
-   * about autoplaying video.
-   *
-   * If autoplay fails, the poster image
-   * remains visible instead of showing
-   * a broken-looking video area.
-   */
 
   if (heroVideo) {
 
