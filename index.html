@@ -355,35 +355,24 @@
       position:
         fixed;
 
-      top:
-        0;
+      top:0;
+      left:0;
+      right:0;
 
-      left:
-        0;
+      z-index:1000;
 
-      right:
-        0;
-
-      z-index:
-        1000;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
 
       padding:
-        calc(24px + env(safe-area-inset-top)) 5%;
+        calc(17px + env(safe-area-inset-top))
+        5%
+        17px;
+      
+      color:white;
 
-      color:
-        white;
-
-      background:
-        transparent;
+      background:transparent;
 
       transition:
         background .4s var(--ease),
@@ -1765,7 +1754,9 @@
       .navbar {
 
         padding:
-          17px 5%;
+          calc(17px + env(safe-area-inset-top))
+          5%
+          17%;
 
       }
 
